@@ -1,9 +1,6 @@
 ---
-image: "@assets/astrogon-star.svg"
+image: "@assets/fuchs_logo.svg"
 imageAlt: Astrogon logo
-title: Astrogon
-content: A rapidly-customizable template for a blog, documentation, and more.
-button:
-  label: See the Code
-  link: https://github.com/astrogon/astrogon
+title: Alexander Kranzl
+content: Willkommen auf meiner persöhnlichen Website!
 ---
