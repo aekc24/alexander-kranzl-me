@@ -69,6 +69,9 @@ Your host will give you two simple DNS values:
 
 Once saved in your registrar's dashboard, the host automatically issues a free SSL certificate within minutes. Your website is now live worldwide under your own personal domain!
 
+### 4. Set Your `SITE_URL` Environment Variable
+In your host settings (**Settings** → **Environment Variables**), add `SITE_URL=https://yourdomain.com` and trigger a redeploy. This ensures Minrock compiles your sitemap, canonical SEO tags, OpenGraph cards, and RSS feed with your custom domain instead of the demo fallback.
+
 ---
 
 ## Take Ownership of Your Corner of the Web
