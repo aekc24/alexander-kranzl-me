@@ -154,6 +154,15 @@ O Minrock respeita integralmente a sua soberania digital: o sistema de comentár
 * **Para Usar Outro Provedor:** Você tem soberania e liberdade total! Basta abrir [`src/components/Comments.astro`](src/components/Comments.astro) e colar o script ou widget da sua preferência dentro do componente. Sem aprisionamento (*vendor lock-in*).
 * **Para Desativar Completamente:** Mude para `comments.enabled = false` em `src/config/site.ts`. Quando desativado, o Astro remove completamente qualquer HTML ou script de comentários do seu build estático (0 bytes de JS, 0 requisições de rede).
 
+### 5. Deploy & URL de Produção (`SITE_URL`)
+
+A sua URL de produção é responsável por alimentar o sitemap, feed RSS, tags canônicas de SEO, `llms.txt` e dados estruturados Schema.org. Defina-a por meio da variável de ambiente `SITE_URL` em vez de alterar o código-fonte:
+
+* **No seu provedor de hospedagem:** Adicione `SITE_URL=https://seudominio.com` nas configurações do projeto (Environment Variables) da Vercel, Cloudflare Pages ou Netlify e realize um novo deploy.
+* **Localmente:** Copie [`.env.example`](.env.example) para `.env` e defina `SITE_URL`.
+
+Se `SITE_URL` não for configurada, o Minrock utilizará como fallback a URL do demo (`https://minrock.vercel.app`), portanto lembre-se de defini-la antes de colocar o site em produção.
+
 ---
 
 ## 📜 Comandos Disponíveis
