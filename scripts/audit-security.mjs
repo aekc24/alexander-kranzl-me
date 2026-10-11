@@ -41,7 +41,8 @@ for (const file of srcFiles) {
   for (const pat of secretPatterns) {
     const match = content.match(pat.regex);
     if (match) {
-      findings.push({ severity: 'HIGH', category: 'Secret Leak', file: rel, detail: `Pattern ${pat.name} matched: "${match[0].slice(0, 50)}"` });
+      const redacted = `${match[0].slice(0, 4)}${'*'.repeat(Math.max(match[0].length - 4, 0))}`;
+      findings.push({ severity: 'HIGH', category: 'Secret Leak', file: rel, detail: `Pattern ${pat.name} matched (redacted): "${redacted}"` });
     }
   }
 }
