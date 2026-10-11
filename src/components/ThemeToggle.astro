@@ -78,6 +78,7 @@
     align-items: center;
     justify-content: center;
     gap: 3px;
+    width: var(--header-control-button-width, 44px);
     height: 34px;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -85,7 +86,7 @@
     color: var(--text-muted);
     cursor: pointer;
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-    padding: var(--header-control-button-padding);
+    padding: var(--header-control-button-padding, 0 6px);
   }
 
   .theme-btn-trigger:hover {
@@ -97,15 +98,19 @@
   .theme-active-icon {
     font-size: 1rem;
     line-height: 1;
+    width: 18px;
+    height: 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   .theme-chevron {
     opacity: 0.6;
     margin-left: -1px;
     transition: transform 0.15s ease;
+    flex-shrink: 0;
   }
 
   .theme-btn-trigger[aria-expanded="true"] .theme-chevron {

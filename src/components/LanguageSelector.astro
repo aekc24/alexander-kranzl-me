@@ -13,7 +13,7 @@
       <path d="m22 22-5-10-5 10"></path>
       <path d="M14 18h6"></path>
     </svg>
-    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-left:1px;opacity:0.7;">
+    <svg class="lang-chevron" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
   </button>
@@ -151,6 +151,7 @@
     align-items: center;
     justify-content: center;
     gap: 3px;
+    width: var(--header-control-button-width, 44px);
     height: 34px;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -158,13 +159,24 @@
     color: var(--text-muted);
     cursor: pointer;
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-    padding: var(--header-control-button-padding);
+    padding: var(--header-control-button-padding, 0 6px);
   }
 
   .lang-btn-inner:hover {
     color: var(--text);
     background-color: var(--bg-subtle);
     border-color: var(--accent);
+  }
+
+  .lang-chevron {
+    opacity: 0.6;
+    margin-left: -1px;
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .lang-btn-inner[aria-expanded="true"] .lang-chevron {
+    transform: rotate(180deg);
   }
 
   .lang-dropdown {

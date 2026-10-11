@@ -14,7 +14,7 @@ import { siteConfig } from '../config/site';
     title="Connect / Redes e Contato"
   >
     <!-- Social / At icon -->
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <circle cx="12" cy="12" r="4"></circle>
       <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"></path>
     </svg>
@@ -102,6 +102,7 @@ import { siteConfig } from '../config/site';
     align-items: center;
     justify-content: center;
     gap: 3px;
+    width: var(--header-control-button-width, 44px);
     height: 34px;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -109,7 +110,7 @@ import { siteConfig } from '../config/site';
     color: var(--text-muted);
     cursor: pointer;
     transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-    padding: var(--header-control-button-padding);
+    padding: var(--header-control-button-padding, 0 6px);
   }
 
   .social-btn-trigger:hover {
@@ -122,6 +123,7 @@ import { siteConfig } from '../config/site';
     opacity: 0.6;
     margin-left: -1px;
     transition: transform 0.15s ease;
+    flex-shrink: 0;
   }
 
   .social-btn-trigger[aria-expanded="true"] .social-chevron {
