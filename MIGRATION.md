@@ -5,9 +5,35 @@ This branch replaces the previous website with the complete upstream
 components, styles, scripts, example content, and Obsidian resources. Only
 `ping-pong.md` and its six images were carried over from the previous website.
 
+## Handoff status: incomplete
+
+The user still reports that the local design is not responsive. The migration
+is not accepted and the responsive work remains unresolved. Do not treat a
+successful build or the previous viewport measurements as visual acceptance.
+
+Review the actual running site against https://minrock.vercel.app/ at matching
+phone, tablet, and desktop widths, including sizes between breakpoints.
+The local changes to inspect against upstream are:
+
+- `src/components/Header.astro`: navigation wrapping and a grid below 1000px,
+  with a further stacking rule below 480px.
+- `src/components/AudioPlayer.astro`: flex sizing and status badge wrapping.
+- `src/pages/about.astro`: a scroll container around the table.
+- `src/styles/global.css`: image constraints and long article URL wrapping.
+- `src/config/site.ts`: personal identity and comments disabled.
+- `src/content/blog/ping-pong.md` and six images in `public/images/`: the only
+  content migrated from the previous website.
+
+`npm run qa` completed with no errors or warnings and two upstream hints. Browser
+measurements covered six routes at 19 widths, but their assertions only checked
+page overflow and title wrapping; they did not establish overall design quality
+or correct behavior on physical devices or Safari. A development server restart
+was needed after it served stale CSS during review.
+
+## Current structure
+
 There is no theme submodule, generated application, or separate override layer.
-The upstream layouts are retained. Small responsive corrections allow header
-links and long article URLs to wrap, and constrain images to the reading column.
+The full upstream starter is retained, with the local adjustments listed above.
 Comments are disabled until this blog's own discussion service is configured;
 the complete comment implementation remains in the repository.
 Run the upstream commands directly:
