@@ -1,10 +1,10 @@
 ---
 title: "Ping Pong"
 description: "Ein Spiel auf Scratch leicht programmierbar"
-date: 2025-04-09T11:33:00+02:00
+pubDate: 2025-04-09T11:33:00+02:00
 categories: ["Scratch","Programmieren"]
 tags: ["anleitungen", "scratch"]
-featured_image: "/images/ping-pong.png"
+image: "/images/ping-pong.png"
 draft: false
 hideToc: true
 ---
@@ -18,14 +18,14 @@ Lass uns anfangen!
 
 <!--more-->
 
-# Figuren erstellen
+## Figuren erstellen
 Wir müssen drei Figuren erstellen. Zwei Spieler und ein Ball.
 
 ![Figur erstellen](/images/ping-pong-figur-erstellen-spieler.png)
 
 ![Figur erstellen - duplizieren](/images/ping-pong-figur-erstellen-duplizieren.png)
 
-# Code
+## Code
 
 Skript für die Figur “Spieler Grün”. Steuerung der Figur:
 ![Code - Spieler Grün](/images/ping-pong-code-code-spieler-gruen.png)
@@ -40,7 +40,6 @@ Der Ball prallt von den Schlägern ab.
 
 Fertig! Viel Spaß beim Spielen!
 
-<iframe src="https://scratch.mit.edu/projects/1158379413/embed" width="800" height="600"></iframe>
-
-
-
+<div class="video-container" style="aspect-ratio: 4 / 3">
+<iframe title="Ping Pong auf Scratch spielen" src="https://scratch.mit.edu/projects/1158379413/embed" width="800" height="600"></iframe>
+</div>

@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /api/*
-
-Sitemap: https://www.janedoe.com/sitemap-index.xml
+Sitemap: https://minrock.vercel.app/sitemap-index.xml
