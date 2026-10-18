@@ -521,6 +521,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.75rem;
     padding: 0.75rem 1.25rem;
     background: transparent;
     border: none;
@@ -536,6 +537,8 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
 
   .audio-toggle-left {
     display: flex;
+    flex: 1;
+    min-width: 0;
     align-items: center;
     gap: 0.65rem;
   }
@@ -548,6 +551,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
 
   .audio-toggle-text {
     display: flex;
+    min-width: 0;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.92rem;
@@ -570,11 +574,13 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
 
   .audio-toggle-right {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     gap: 0.65rem;
   }
 
   .audio-status-badge {
+    white-space: nowrap;
     font-size: 0.75rem;
     font-family: var(--font-mono);
     padding: 0.15rem 0.5rem;
