@@ -18,6 +18,8 @@ export interface SiteFeatures {
   tags?: boolean;
   /** Notion-style share modal and trigger bar in blog posts */
   socialShare?: boolean;
+  /** LinkedIn and GitHub profile buttons, and the "Share:" label, beside the share button */
+  shareProfileLinks?: boolean;
   /** Theme toggle dropdown (White, Cream, Slate, Midnight) */
   themeSwitcher?: boolean;
   /** Header language menu that machine-translates pages via Google Translate */
@@ -104,6 +106,7 @@ export const siteConfig: SiteConfig = {
     audioPlayer: true,
     tags: true,
     socialShare: true,
+    shareProfileLinks: false,
     themeSwitcher: true,
     languageSelector: false,
     backToTop: true,
