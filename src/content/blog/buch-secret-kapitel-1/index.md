@@ -3,7 +3,7 @@ title: "Secret: Kapitel 1"
 description: "Ein spannender Action-Fantasy Roman"
 pubDate: 2025-03-25
 tags: ["geschichten", "secret"]
-image: "/images/buch-secret.webp"
+image: "/images/buch-secret.jpg"
 ---
 
 Als Michael die Koffer in den Lift geben will, hört er aus der Wohnung ein Klirren und Scheppern. Er schaut nach was passiert ist, doch bemerkkt dann, dass seine Mutter verschwunden ist. Voller Verzweiflung rennt er auf die Straße und trifft eine sonderbaren Mann. Als er dann zu seinem Freund gehen will, um Hilfe zu holen wird er von einem Monster angegriffen. Als werd das nicht alles schon genug wird er noch von einem Doktor gelämmt und verschleppt.S

@@ -3,7 +3,7 @@ title: "Secret: Prólogo"
 description: "Una emocionante novela de acción y fantasía"
 pubDate: 2025-03-20T11:33:00+02:00
 tags: ["geschichten", "secret"]
-image: "/images/buch-secret.webp"
+image: "/images/buch-secret.jpg"
 lang: es
 ---
 

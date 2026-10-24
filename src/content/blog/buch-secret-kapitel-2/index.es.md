@@ -3,7 +3,7 @@ title: "Secret: Capítulo 2"
 description: "Una emocionante novela de acción y fantasía"
 pubDate: 2025-03-30T11:33:00+02:00
 tags: ["geschichten", "secret"]
-image: "/images/buch-secret.webp"
+image: "/images/buch-secret.jpg"
 lang: es
 ---
 

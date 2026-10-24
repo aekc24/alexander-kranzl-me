@@ -3,7 +3,7 @@ title: "Secret: Capítulo 1"
 description: "Una emocionante novela de acción y fantasía"
 pubDate: 2025-03-25
 tags: ["geschichten", "secret"]
-image: "/images/buch-secret.webp"
+image: "/images/buch-secret.jpg"
 lang: es
 ---
 

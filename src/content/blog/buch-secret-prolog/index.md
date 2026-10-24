@@ -3,7 +3,7 @@ title: "Secret: Prolog"
 description: "Ein spannender Action-Fantasy Roman"
 pubDate: 2025-03-20T11:33:00+02:00
 tags: ["geschichten", "secret"]
-image: "/images/buch-secret.webp"
+image: "/images/buch-secret.jpg"
 ---
 
 Burg Walberg geht in Flammen auf und Blackstone schafft es gerade noch zu fliehen. Doch was er in einer klienen Kiste, die unter der Asche der zerstörten Burg lag, endteckt, wird ihm wenig später zum Verhängnis. Er wirdin eie andere Dimension teleportiert. In eien die nicht gerade ein Wundereland ist.S
