@@ -3,6 +3,7 @@ import { loadEnv } from 'vite';
 import sitemap from '@astrojs/sitemap';
 import { satteri } from '@astrojs/markdown-satteri';
 import { rehypeCallouts } from './src/plugins/rehype-callouts.mjs';
+import { siteConfig } from './src/config/site.ts';
 
 // Honor SITE_URL from the shell, the host (e.g. Vercel), or a local .env file.
 // Vite has not loaded .env yet at this point, so read it explicitly.
@@ -12,7 +13,7 @@ if (env.SITE_URL) {
 }
 
 export default defineConfig({
-  site: env.SITE_URL || 'https://minrock.vercel.app',
+  site: env.SITE_URL || siteConfig.siteUrl,
   integrations: [sitemap()],
   prefetch: {
     prefetchAll: true,
