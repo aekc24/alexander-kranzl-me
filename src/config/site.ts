@@ -33,6 +33,8 @@ export interface SiteConfig {
   tagline: string;
   description: string;
   author: string;
+  /** Language of the site's content as a BCP 47 tag (e.g. 'en', 'de', 'pt-BR'). Defaults to 'en'. */
+  lang?: string;
   /** Brand mark image (path under public/) for the header, share preview and search footer. Falls back to the 🪨 emoji. */
   logo?: string;
   /** Browser tab icon (path under public/). Falls back to the 🪨 emoji. */

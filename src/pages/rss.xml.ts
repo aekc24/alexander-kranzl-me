@@ -16,6 +16,6 @@ export async function GET(context: any) {
       description: post.data.description,
       link: `/blog/${post.id}/`
     })),
-    customData: `<language>en-us</language>`
+    customData: `<language>${(siteConfig.lang ?? 'en').toLowerCase()}</language>`
   });
 }
