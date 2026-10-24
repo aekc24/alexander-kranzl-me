@@ -254,8 +254,10 @@ const showLanguageSelector = features.languageSelector !== false;
     display: block;
   }
 
-  /* Phones: brand, search and menu toggle share one row; nav and controls fold into a toggled panel */
-  @media (max-width: 768px) {
+  /* Phones and tablets: brand, compact search and menu toggle share one row; nav and
+     controls fold into a toggled panel. Below 1000px brand, links and the full search box
+     no longer fit on one row. */
+  @media (max-width: 999px) {
     .header-inner {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto auto;
@@ -264,6 +266,14 @@ const showLanguageSelector = features.languageSelector !== false;
 
     .header-actions {
       display: contents;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    .mobile-only {
+      display: inline-flex;
     }
 
     .brand {
@@ -376,7 +386,7 @@ const showLanguageSelector = features.languageSelector !== false;
     });
 
     // Leaving the phone layout (rotation, resize) resets the panel
-    window.matchMedia('(min-width: 769px)').addEventListener('change', (e) => {
+    window.matchMedia('(min-width: 1000px)').addEventListener('change', (e) => {
       if (e.matches) setOpen(false);
     });
   }
