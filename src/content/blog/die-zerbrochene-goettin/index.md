@@ -2,7 +2,7 @@
 title: "Die zerbrochene Göttin"
 description: "Eine Kurzgeschichte über einen Einbruch, eine zerbrochene Statue und eine rätselhafte Frage."
 pubDate: 2026-10-04
-tags: ["kurzgeschichten"]
+tags: ["geschichten"]
 ---
 
 Die Dämmerung brach über die Stadt herein. Die Lichter der Straßenlaternen erhellten die leeren Gassen mit einem unheimlichen, aber warmen Licht. In den Parks und Grünflächen lagen die Blätter auf dem kalten und nassen Boden. Die letzten Sonnenstrahlen fielen auf die rot-braune Herbstlandschaft. Nur noch wenige Menschen waren um diese Zeit draußen unterwegs. Die meisten Leute saßen in ihren warmen Wohnungen, anstatt in der Kälte zu erfrieren. Der leichte Nieselregen wehte ihm ins Gesicht. Das Nasse rann ihm den Nacken hinunter, bis in den Kragen seines Pullovers, und ließ ihn jedes Mal erschaudern. Der Herbst war für viele die Zeit des Kalten, Nassen, Dunklen und die Zeit der Veränderung. Die Leute legten sich auch Vorräte zu, Filme zum Schauen und Bücher zum Lesen. Sie legten sich auch Winterspeck zu und haufenweise Tees und Pullover.

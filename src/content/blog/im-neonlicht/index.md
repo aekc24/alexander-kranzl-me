@@ -2,7 +2,7 @@
 title: "Im Neonlicht"
 description: "Eine Kurzgeschichte über eine Begegnung in der U-Bahn."
 pubDate: 2026-08-05
-tags: ["kurzgeschichten"]
+tags: ["geschichten"]
 ---
 
 Die letzten Sonnenstrahlen verschwanden hinter den Hochhäusern und die Großstadt verfiel der Dämmerung. Die Straßenlaternen tauchten die Straßen in ein kaltes Licht. Autos rasten die Autobahn entlang, während hier unten die Neonröhren aufflackerten. Der Bahnsteig war fast leer. Graffiti übersäten die Wände und ließen die Station kalt und beinahe unheimlich wirken. Zuerst war es nur ein leises Quietschen, dann fuhr die U-Bahn mit einem lauten Dröhnen in die Station ein. Die Türen öffneten sich mit einem Zischen und nur wenige Passagiere stiegen aus. Als der Eingang des Wagons frei war, stieg ich ein. Ich setzte mich wie gewöhnlich auf einen Fensterplatz und zog mein Handy aus der Tasche. Alles war still. Man vernahm nur das Ruckeln des Zuges, als er um die Kurve fuhr. Plötzlich durchbrach ein lautes Krachen die Stille. Die Frau vor mir schaute auf. Die U-Bahn fuhr gemächlich weiter. Dann versank die Passagierin vor mir wieder in endlose Stille. Ich tat es ihr gleich und schaute auf meinen Bildschirm. Die Zeit verging, die Namensschilder der Stationen flogen am Fenster vorbei.

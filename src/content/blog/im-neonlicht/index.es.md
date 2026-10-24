@@ -2,7 +2,7 @@
 title: "Bajo la luz de neón"
 description: "Un relato corto sobre un encuentro en el metro."
 pubDate: 2026-08-05
-tags: ["kurzgeschichten"]
+tags: ["geschichten"]
 lang: es
 ---
 

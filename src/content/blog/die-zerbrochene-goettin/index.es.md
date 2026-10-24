@@ -2,7 +2,7 @@
 title: "La diosa rota"
 description: "Un relato corto sobre un robo, una estatua rota y una pregunta enigmática."
 pubDate: 2026-10-04
-tags: ["kurzgeschichten"]
+tags: ["geschichten"]
 lang: es
 ---
 
