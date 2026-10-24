@@ -2,88 +2,40 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About — Minrock Philosophy">
+<!-- Placeholder text until the real About page is written -->
+<BaseLayout title="About">
   <article class="about-page">
     <header class="about-header">
-      <h1 class="page-title">About Minrock</h1>
-      <p class="page-subtitle">The story and philosophy behind the rock.</p>
+      <h1 class="page-title">About</h1>
+      <p class="page-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </header>
 
     <div class="about-content">
-      <h2>The Concept: Raw Ideas, Polished Rock</h2>
       <p>
-        <strong>Minrock</strong> was born from a simple belief: personal notes in an Obsidian vault represent the raw, unshaped volcanic rock of your thoughts. When published to the web, they deserve an architecture that feels as permanent and solid as stone, yet as fast and frictionless as light.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+
+      <h2>Lorem ipsum</h2>
+      <p>
+        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit.
       </p>
 
       <blockquote>
-        "Minrock is the solid bedrock where knowledge rests; ScatterLeaf is the gentle breeze where ideas and conversations drift."
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </blockquote>
 
-      <h2>The Mission: Democratizing Digital Sovereignty</h2>
+      <h2>Dolor sit amet</h2>
       <p>
-        At its core, Minrock exists to <strong>democratize access and empower personal positioning on the open web</strong>. In an era where digital presence is increasingly corralled into corporate walled gardens and algorithmic feeds, this project provides everyone with a sovereign space to truly call their own—without outside interference, steep technical hurdles, and at zero financial cost.
+        Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
       </p>
-
-      <blockquote class="manifesto-quote">
-        <em>"A ideia do projeto é propiciar e democratizar o acesso e o posicionamento das pessoas na web, garantindo um espaço soberano para chamar de seu: sem interferências, sem grandes dificuldades e com custo zero."</em>
-        <br />
-        <span class="manifesto-author">— Renato Rezende, Creator of Minrock</span>
-      </blockquote>
-
-      <h2>Core Principles</h2>
-      <ul>
-        <li><strong>Pure SSG (Zero Bloat):</strong> Every page is pre-rendered at build time. No database calls, no client-side runtime bloat, and instant CDN delivery worldwide.</li>
-        <li><strong>Typography-First:</strong> Words are the interface. We optimize measure, line height, and font contrast so readers can stay immersed for hours.</li>
-        <li><strong>Four Handcrafted Palettes:</strong> Whether you prefer the warmth of aged paper (<em>Cream</em>), the focus of <em>Slate Navy</em>, clean editorial <em>White</em>, or battery-saving <em>Midnight OLED</em>, the design adapts effortlessly.</li>
-        <li><strong>Obsidian Native:</strong> Drop your Markdown files directly into <code>src/content/blog/</code> and watch them publish without custom plugin dependencies.</li>
-      </ul>
-
-      <h2>Craftsmanship & Origins</h2>
       <p>
-        Minrock was conceptualized, designed, and engineered with pride in Brazil 🇧🇷 by <strong><a href="https://github.com/rnt-rez" target="_blank" rel="noopener noreferrer">Renato Rezende</a></strong>. It represents a commitment to high-standard software craftsmanship tailored for the global open-source ecosystem.
+        Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.
       </p>
-
-      <h2>Tech Stack</h2>
-      <div class="table-scroll" role="region" aria-label="Tech stack" tabindex="0">
-      <table>
-        <thead>
-          <tr>
-            <th>Layer</th>
-            <th>Technology</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Framework</td>
-            <td>Astro 7</td>
-            <td>Zero-JS static site generation</td>
-          </tr>
-          <tr>
-            <td>Styling</td>
-            <td>Vanilla Modern CSS</td>
-            <td>4 theme palettes with custom properties</td>
-          </tr>
-          <tr>
-            <td>Content</td>
-            <td>Obsidian Vault (Markdown)</td>
-            <td>Content collections with Zod schema</td>
-          </tr>
-          <tr>
-            <td>Discussions</td>
-            <td>ScatterLeaf</td>
-            <td>Iframe-free native comments Web Component</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
     </div>
   </article>
 </BaseLayout>
 
 <style>
-  .table-scroll { max-width: 100%; overflow-x: auto; }
-
   .about-page {
     padding-top: 1rem;
   }
@@ -109,22 +61,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .about-content {
     font-size: 1.05rem;
     line-height: 1.8;
-  }
-
-  .manifesto-quote {
-    margin: 1.75rem 0;
-    padding: 1.25rem 1.5rem;
-    border-left: 3px solid var(--accent);
-    background: var(--bg-surface);
-    border-radius: 0 8px 8px 0;
-    font-style: normal;
-  }
-
-  .manifesto-author {
-    display: inline-block;
-    margin-top: 0.6rem;
-    font-size: 0.85rem;
-    font-family: var(--font-mono);
-    color: var(--text-muted);
   }
 </style>
