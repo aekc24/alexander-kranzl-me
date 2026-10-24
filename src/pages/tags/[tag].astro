@@ -34,6 +34,7 @@ export async function getStaticPaths() {
 
 const { posts, projects = [], tag } = Astro.props;
 const totalCount = posts.length + projects.length;
+const hasProjects = (await getCollection('projects')).length > 0;
 ---
 
 <BaseLayout
@@ -48,8 +49,8 @@ const totalCount = posts.length + projects.length;
     </div>
     <h1 class="tag-title">{t('tag.title')} <span class="highlight">#{tag}</span></h1>
     <p class="tag-count">
-      {t(totalCount === 1 ? 'tag.countOne' : 'tag.countOther', { count: totalCount })}{' '}
-      {t('tag.breakdown', { posts: posts.length, projects: projects.length })}
+      {t(totalCount === 1 ? 'tag.countOne' : 'tag.countOther', { count: totalCount })}
+      {hasProjects && ` ${t('tag.breakdown', { posts: posts.length, projects: projects.length })}`}
     </p>
   </header>
 
