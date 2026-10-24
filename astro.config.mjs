@@ -1,42 +1,39 @@
-import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import AutoImport from "astro-auto-import";
-import { defineConfig } from "astro/config";
-import remarkCollapse from "remark-collapse";
-import remarkToc from "remark-toc";
-import rehypeKatex from "rehype-katex";
-import remarkMath from "remark-math";
-import cloudflare from "@astrojs/cloudflare";
+import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
+import sitemap from '@astrojs/sitemap';
+import { satteri } from '@astrojs/markdown-satteri';
+import { rehypeCallouts } from './src/plugins/rehype-callouts.mjs';
+import { siteConfig } from './src/config/site.ts';
 
-// https://astro.build/config
+// Honor SITE_URL from the shell, the host (e.g. Vercel), or a local .env file.
+// Vite has not loaded .env yet at this point, so read it explicitly.
+const env = { ...loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), ''), ...process.env };
+if (env.SITE_URL) {
+  process.env.SITE_URL = env.SITE_URL;
+}
+
 export default defineConfig({
-  site: "https://janedoe.com",
-  base: "/",
-  trailingSlash: "ignore",
+  site: env.SITE_URL || siteConfig.siteUrl,
+  integrations: [sitemap()],
   prefetch: {
-    prefetchAll: true
+    prefetchAll: true,
+    defaultStrategy: 'hover'
   },
-  adapter: cloudflare(),
-  integrations: [react(), sitemap(), tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), AutoImport({
-    imports: ["@components/common/Button.astro", "@shortcodes/Accordion", "@shortcodes/Notice", "@shortcodes/Youtube", "@shortcodes/Tabs", "@shortcodes/Tab"]
-  }), mdx()],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, {
-      test: "Table of contents"
-    }], remarkMath],
-    rehypePlugins: [[rehypeKatex, {}]],
+    processor: satteri({
+      hastPlugins: [rehypeCallouts()],
+    }),
     shikiConfig: {
-      themes: { // https://shiki.style/themes
-        light: "light-plus",
-        dark: "dark-plus",
-      } 
-    },
-    extendDefaultPlugins: true
+      theme: 'github-dark-dimmed',
+      wrap: true
+    }
   },
+  vite: {
+    server: {
+      watch: {
+        ignored: ['**/.obsidian/**', '**/_bases/**', '**/bases/**', '**/_home/**', '**/home/**', '**/_base/**', '**/base/**']
+      }
+    },
+    assetsInclude: ['**/*.base', '**/.obsidian/**', '**/_bases/**']
+  }
 });

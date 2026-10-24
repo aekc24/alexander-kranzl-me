@@ -1,0 +1,48 @@
+name: Execute Astro Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Astro Checks & Audits Gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run check
+
+      - name: Build site
+        run: npm run build
+
+      - name: Audit WCAG 2.1/2.2 AA
+        run: npm run audit:wcag
+
+      - name: Audit DevSecOps Sentinel
+        run: npm run audit:security
+
+      - name: Audit Google Search SERP
+        run: npm run audit:google

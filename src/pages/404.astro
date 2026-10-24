@@ -1,5 +1,97 @@
 ---
-import EntryLayout from "@components/not-found/EntryLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/ui';
 ---
 
-<EntryLayout />
+<BaseLayout title={t('notFound.pageTitle')} description={t('notFound.description')}>
+  <div class="not-found-container">
+    <div class="not-found-badge">404</div>
+    <h1 class="not-found-title">{t('notFound.title')}</h1>
+    <p class="not-found-text">
+      {t('notFound.text')}
+    </p>
+    <div class="not-found-actions">
+      <a href="/" class="btn-primary">{t('notFound.home')}</a>
+      <a href="/blog" class="btn-secondary">{t('notFound.articles')}</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1rem;
+  }
+
+  .not-found-badge {
+    font-family: var(--font-mono);
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+  }
+
+  .not-found-title {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .not-found-text {
+    max-width: 480px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0 2.5rem 0;
+  }
+
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--accent);
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+    color: #ffffff;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--bg-surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--bg-subtle);
+    border-color: var(--accent);
+  }
+</style>

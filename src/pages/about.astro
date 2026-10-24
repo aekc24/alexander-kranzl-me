@@ -1,9 +1,65 @@
 ---
-import type { AboutEntry } from "@/types";
-import EntryLayout from "@components/about/EntryLayout.astro";
-import { getIndex } from "@lib/contentParser";
-
-const entry = (await getIndex("about")) as AboutEntry;
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<EntryLayout entry={entry} />
+<!-- Placeholder text until the real About page is written -->
+<BaseLayout title="Über mich">
+  <article class="about-page">
+    <header class="about-header">
+      <h1 class="page-title">Über mich</h1>
+      <p class="page-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    <div class="about-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+
+      <h2>Lorem ipsum</h2>
+      <p>
+        Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit.
+      </p>
+
+      <blockquote>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </blockquote>
+
+      <h2>Dolor sit amet</h2>
+      <p>
+        Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.
+      </p>
+      <p>
+        Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding-top: 1rem;
+  }
+
+  .about-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2.25rem;
+  }
+
+  .page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .about-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+// Stories are blog posts tagged `geschichten`; translations show up on each story's page
+const stories = (await getCollection('blog', ({ data }) => !data.draft && data.tags.includes('geschichten')))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Geschichten" description="Kurzgeschichten von Alexander Kranzl.">
+  <div class="stories-page">
+    <header class="stories-header">
+      <h1 class="page-title">Geschichten</h1>
+      <p class="page-desc">Kurzgeschichten und das Buch „Secret“ – auf Deutsch und auf Spanisch.</p>
+    </header>
+
+    <div class="posts-list">
+      {stories.map((post) => (
+        <ArticleCard post={post} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .stories-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2.4rem;
+    letter-spacing: -0.025em;
+  }
+
+  .page-desc {
+    color: var(--text-muted);
+    margin-bottom: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+</style>
