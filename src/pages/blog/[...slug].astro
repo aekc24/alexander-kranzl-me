@@ -78,7 +78,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
   <div class:list={['post-page-container', { 'no-sidebar': !showToc }]}>
     <!-- Main Content Column -->
     <div class="post-main">
-      <article class="post-article" lang={post.data.lang}>
+      <article class="post-article">
         <header class="post-header">
           <div class="post-meta">
             <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
@@ -106,8 +106,8 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
             )}
           </div>
 
-          <h1 class="post-title">{post.data.title}</h1>
-          <p class="post-description">{post.data.description}</p>
+          <h1 class="post-title" lang={post.data.lang}>{post.data.title}</h1>
+          <p class="post-description" lang={post.data.lang}>{post.data.description}</p>
 
           {versions.length > 1 && (
             <nav class="post-langs" aria-label={t('post.language')}>
@@ -136,7 +136,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
           </figure>
         )}
 
-        <div class="post-content">
+        <div class="post-content" lang={post.data.lang}>
           <Content />
         </div>
 
