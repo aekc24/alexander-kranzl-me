@@ -12,6 +12,7 @@ const { currentPath = Astro.url.pathname } = Astro.props;
 const features = siteConfig.features ?? {};
 const showSearch = features.search !== false;
 const showThemeSwitcher = features.themeSwitcher !== false;
+const showLanguageSelector = features.languageSelector !== false;
 ---
 
 <header class="site-header">
@@ -66,7 +67,7 @@ const showThemeSwitcher = features.themeSwitcher !== false;
       <div class="header-controls">
         <SocialDropdown />
         {showThemeSwitcher && <ThemeToggle />}
-        <LanguageSelector />
+        {showLanguageSelector && <LanguageSelector />}
       </div>
 
       <!-- Mobile Menu Toggle -->

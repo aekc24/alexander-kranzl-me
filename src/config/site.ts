@@ -20,6 +20,8 @@ export interface SiteFeatures {
   socialShare?: boolean;
   /** Theme toggle dropdown (White, Cream, Slate, Midnight) */
   themeSwitcher?: boolean;
+  /** Header language menu that machine-translates pages via Google Translate */
+  languageSelector?: boolean;
   /** Floating smooth-scroll back-to-top button */
   backToTop?: boolean;
   /** Medium-style smooth image zoom modal on click */
