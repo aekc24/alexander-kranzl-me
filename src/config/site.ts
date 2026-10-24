@@ -37,6 +37,8 @@ export interface SiteConfig {
   author: string;
   /** Home page hero heading. Falls back to Minrock's default heading. */
   heroTitle?: string;
+  /** Line under the home page hero heading. Falls back to the tagline; false hides it. */
+  heroSubtitle?: string | false;
   /** Language of the site's content as a BCP 47 tag (e.g. 'en', 'de', 'pt-BR'). Defaults to 'en'. */
   lang?: string;
   /** Brand mark image (path under public/) for the header, share preview and search footer. Falls back to the 🪨 emoji. */

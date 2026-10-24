@@ -5,6 +5,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../config/site';
 
+const heroSubtitle = siteConfig.heroSubtitle ?? siteConfig.tagline;
+
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const recentPosts = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -31,9 +33,11 @@ const topTags = [...tagsMap.entries()]
     <h1 class="hero-title">
       {siteConfig.heroTitle ?? 'Crafted for deep thinking & technical writing.'}
     </h1>
-    <p class="hero-subtitle">
-      {siteConfig.tagline}
-    </p>
+    {heroSubtitle && (
+      <p class="hero-subtitle">
+        {heroSubtitle}
+      </p>
+    )}
     <div class="hero-actions">
       <a href="/blog" class="btn btn-primary">Read Articles →</a>
       {allProjects.length > 0 && <a href="/projects" class="btn btn-secondary">Explore Projects</a>}
@@ -123,6 +127,11 @@ const topTags = [...tagsMap.entries()]
     line-height: 1.6;
     margin-bottom: 2rem;
     max-width: 640px;
+  }
+
+  /* Without a subtitle, keep the space the subtitle would leave above the buttons */
+  .hero-title + .hero-actions {
+    margin-top: 2rem;
   }
 
   .hero-actions {
