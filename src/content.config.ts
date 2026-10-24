@@ -1,15 +1,16 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, type SchemaContext } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
-const postSchema = z.object({
+const postSchema = ({ image }: SchemaContext) => z.object({
   title: z.string(),
   description: z.string(),
   pubDate: z.coerce.date(),
   updatedDate: z.coerce.date().optional(),
   tags: z.array(z.string()).default([]),
   draft: z.boolean().default(false),
-  image: z.string().optional(),
+  /** Cover image: a file next to the post (`./cover.png`), or a path under public/ (`/images/cover.png`) or URL */
+  image: z.union([z.string().regex(/^(\/|https?:\/\/)/), image()]).optional(),
   audio: z.boolean().default(true),
   /** Language of this post (BCP 47, e.g. 'es') when it differs from siteConfig.lang */
   lang: z.string().optional(),
@@ -28,7 +29,7 @@ const translations = defineCollection({
     base: './src/content/blog',
     generateId: ({ entry }) => entry.replace(/(\/index)?\.([^./]+)\.mdx?$/, '/$2'),
   }),
-  schema: postSchema.extend({ lang: z.string() }),
+  schema: (context) => postSchema(context).extend({ lang: z.string() }),
 });
 
 const projects = defineCollection({

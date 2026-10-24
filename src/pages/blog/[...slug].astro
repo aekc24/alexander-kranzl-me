@@ -7,6 +7,7 @@ import AudioPlayer from '../../components/AudioPlayer.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import Comments from '../../components/Comments.astro';
 import { getCollection, getEntry, render } from 'astro:content';
+import { Image } from 'astro:assets';
 import { siteConfig } from '../../config/site';
 import { t, formatDate } from '../../i18n/ui';
 
@@ -132,7 +133,9 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
 
         {post.data.image && (
           <figure class="post-cover">
-            <img src={post.data.image} alt={post.data.title} class="cover-img" />
+            {typeof post.data.image === 'string'
+              ? <img src={post.data.image} alt={post.data.title} class="cover-img" />
+              : <Image src={post.data.image} alt={post.data.title} class="cover-img" />}
           </figure>
         )}
 
