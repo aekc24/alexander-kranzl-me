@@ -1,7 +1,10 @@
 ---
 // src/components/SearchModal.astro
 // Global Search Modal with rich result cards, fuzzy matching, and keyboard navigation (Ctrl + K)
+import { getCollection } from 'astro:content';
 import { siteConfig } from '../config/site';
+
+const hasProjects = (await getCollection('projects')).length > 0;
 ---
 
 <!-- Search Modal Backdrop & Container -->
@@ -18,7 +21,7 @@ import { siteConfig } from '../config/site';
           type="text"
           id="search-modal-input"
           class="search-input"
-          placeholder="Search articles, projects, topics, tags..."
+          placeholder={hasProjects ? 'Search articles, projects, topics, tags...' : 'Search articles, topics, tags...'}
           autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
@@ -45,10 +48,12 @@ import { siteConfig } from '../config/site';
             <span class="pill-icon">📄</span>
             <span>All Articles</span>
           </a>
-          <a href="/projects" class="initial-pill">
-            <span class="pill-icon">📦</span>
-            <span>All Projects</span>
-          </a>
+          {hasProjects && (
+            <a href="/projects" class="initial-pill">
+              <span class="pill-icon">📦</span>
+              <span>All Projects</span>
+            </a>
+          )}
           <a href="/tags" class="initial-pill">
             <span class="pill-icon">🏷️</span>
             <span>All Tags</span>
