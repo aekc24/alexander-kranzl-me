@@ -25,7 +25,7 @@ const showThemeSwitcher = features.themeSwitcher !== false;
     </a>
 
     <!-- Main Nav -->
-    <nav class="nav" aria-label="Main Navigation">
+    <nav id="main-nav" class="nav" aria-label="Main Navigation">
       {siteConfig.navLinks.map((link) => {
         const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
         return (
@@ -68,6 +68,19 @@ const showThemeSwitcher = features.themeSwitcher !== false;
         {showThemeSwitcher && <ThemeToggle />}
         <LanguageSelector />
       </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="icon-btn menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="menu-icon-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="12" x2="20" y2="12"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+        <svg class="menu-icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
@@ -230,35 +243,143 @@ const showThemeSwitcher = features.themeSwitcher !== false;
     }
   }
 
-  @media (max-width: 1000px) {
+  .menu-toggle,
+  .menu-icon-close,
+  .site-header.menu-open .menu-icon-open {
+    display: none;
+  }
+
+  .site-header.menu-open .menu-icon-close {
+    display: block;
+  }
+
+  /* Phones: brand, search and menu toggle share one row; nav and controls fold into a toggled panel */
+  @media (max-width: 768px) {
     .header-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 0.75rem 1rem;
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      gap: 0 0.5rem;
     }
 
     .header-actions {
-      grid-column: 2;
-      grid-row: 1;
-      margin: 0;
+      display: contents;
     }
 
-    .nav {
-      grid-column: 1 / -1;
-      grid-row: 2;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.25rem 1rem;
-      max-width: 100%;
+    .brand {
+      grid-area: 1 / 1;
+      min-width: 0;
     }
 
-    .nav-link { padding: 0.4rem 0.35rem; }
+    .brand-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+    }
+
+    #mobile-search-btn {
+      grid-area: 1 / 2;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      grid-area: 1 / 3;
+    }
+
+    .nav,
+    .header-controls {
+      display: none;
+    }
+
+    .site-header.menu-open .nav {
+      display: flex;
+      grid-area: 2 / 1 / 3 / -1;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      margin-top: 0.85rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .site-header.menu-open .nav-link {
+      padding: 0.7rem 0.35rem;
+      font-size: 1rem;
+    }
+
+    .site-header.menu-open .header-controls {
+      display: flex;
+      grid-area: 3 / 1 / 4 / -1;
+      padding: 0.5rem 0 0.25rem;
+    }
   }
 
-  @media (max-width: 480px) {
-    .header-inner { grid-template-columns: minmax(0, 1fr); }
-    .brand { justify-self: center; }
-    .header-actions { grid-column: 1; grid-row: 3; justify-content: center; }
-    .nav { column-gap: 0.5rem; }
+  /* Small phones: shrink the brand so the full title still fits beside the two buttons */
+  @media (max-width: 400px) {
+    .brand {
+      gap: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .brand-logo {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+
+  @media (max-width: 340px) {
+    .header-inner {
+      column-gap: 0.35rem;
+    }
+
+    .brand {
+      gap: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .brand-logo {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+    }
   }
 </style>
+
+<script>
+  function setupMobileMenu() {
+    const header = document.querySelector('.site-header');
+    const btn = document.getElementById('mobile-menu-btn');
+    if (!header || !btn) return;
+
+    const setOpen = (open: boolean) => {
+      header.classList.toggle('menu-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    };
+
+    btn.addEventListener('click', () => setOpen(!header.classList.contains('menu-open')));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('menu-open')) {
+        setOpen(false);
+        btn.focus();
+      }
+    });
+
+    // Leaving the phone layout (rotation, resize) resets the panel
+    window.matchMedia('(min-width: 769px)').addEventListener('change', (e) => {
+      if (e.matches) setOpen(false);
+    });
+  }
+
+  setupMobileMenu();
+  document.addEventListener('astro:after-swap', setupMobileMenu);
+</script>
