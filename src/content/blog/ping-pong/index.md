@@ -4,7 +4,7 @@ description: "Ein Spiel auf Scratch leicht programmierbar"
 pubDate: 2025-04-09T11:33:00+02:00
 categories: ["Scratch","Programmieren"]
 tags: ["anleitungen", "scratch"]
-image: "/images/ping-pong.png"
+image: "./cover.png"
 draft: false
 hideToc: true
 ---
@@ -21,20 +21,20 @@ Lass uns anfangen!
 ## Figuren erstellen
 Wir müssen drei Figuren erstellen. Zwei Spieler und ein Ball.
 
-![Figur erstellen](/images/ping-pong-figur-erstellen-spieler.png)
+![Figur erstellen](./figur-erstellen-spieler.png)
 
-![Figur erstellen - duplizieren](/images/ping-pong-figur-erstellen-duplizieren.png)
+![Figur erstellen - duplizieren](./figur-erstellen-duplizieren.png)
 
 ## Code
 
 Skript für die Figur “Spieler Grün”. Steuerung der Figur:
-![Code - Spieler Grün](/images/ping-pong-code-code-spieler-gruen.png)
+![Code - Spieler Grün](./code-spieler-gruen.png)
 
 Genau das gleiche machen wir jetzt mit “Spieler Rot”. Wir andern die Tasten. Damit wir im Zwei Spieler-Modus spielen können.
-![Code - Spieler Rot](/images/ping-pong-code-code-spieler-rot.png)
+![Code - Spieler Rot](./code-spieler-rot.png)
 
 Und jetzt geht es zum “Ball”. 
-![Code - Ball](/images/ping-pong-code-code-ball.png)
+![Code - Ball](./code-ball.png)
 Der Ball prallt von den Schlägern ab.
 
 
