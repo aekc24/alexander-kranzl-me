@@ -132,8 +132,10 @@ const socialLinks = [
       <div class="share-preview-card">
         <div class="preview-card-topbar">
           <div class="preview-site-brand">
-            <span class="preview-brand-emoji">🪨</span>
-            <span class="preview-brand-name">Minrock</span>
+            {siteConfig.logo
+              ? <img src={siteConfig.logo} alt="" class="preview-brand-logo" width="16" height="16" />
+              : <span class="preview-brand-emoji">🪨</span>}
+            <span class="preview-brand-name">{siteConfig.title}</span>
           </div>
           <span class="preview-pill">Preview</span>
         </div>
@@ -547,6 +549,12 @@ const socialLinks = [
 
   .preview-brand-emoji {
     font-size: 0.9rem;
+  }
+
+  .preview-brand-logo {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
   }
 
   .preview-brand-name {

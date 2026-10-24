@@ -1,6 +1,7 @@
 ---
 // src/components/SearchModal.astro
 // Global Search Modal with rich result cards, fuzzy matching, and keyboard navigation (Ctrl + K)
+import { siteConfig } from '../config/site';
 ---
 
 <!-- Search Modal Backdrop & Container -->
@@ -71,7 +72,9 @@
         <span class="guide-item"><kbd>ESC</kbd> Close</span>
       </div>
       <div class="search-brand-note">
-        🪨 Minrock Search
+        {siteConfig.logo
+          ? <img src={siteConfig.logo} alt="" class="search-brand-logo" width="14" height="14" />
+          : '🪨'} {siteConfig.title} Search
       </div>
     </div>
   </div>
@@ -972,6 +975,13 @@
     font-family: var(--font-mono);
     font-size: 0.6875rem;
     opacity: 0.8;
+  }
+
+  .search-brand-logo {
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: -0.15em;
+    object-fit: contain;
   }
 
   @media (max-width: 640px) {

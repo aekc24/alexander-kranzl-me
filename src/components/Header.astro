@@ -17,8 +17,10 @@ const showThemeSwitcher = features.themeSwitcher !== false;
 <header class="site-header">
   <div class="container-wide header-inner">
     <!-- Brand -->
-    <a href="/" class="brand" aria-label="Minrock Home">
-      <span class="brand-rock">🪨</span>
+    <a href="/" class="brand" aria-label={`${siteConfig.title} Home`}>
+      {siteConfig.logo
+        ? <img src={siteConfig.logo} alt="" class="brand-logo" width="44" height="44" />
+        : <span class="brand-rock">🪨</span>}
       <span class="brand-title">{siteConfig.title}</span>
     </a>
 
@@ -105,6 +107,12 @@ const showThemeSwitcher = features.themeSwitcher !== false;
 
   .brand-rock {
     font-size: 1.35rem;
+  }
+
+  .brand-logo {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
   }
 
   .nav {

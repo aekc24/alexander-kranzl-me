@@ -33,6 +33,10 @@ export interface SiteConfig {
   tagline: string;
   description: string;
   author: string;
+  /** Brand mark image (path under public/) for the header, share preview and search footer. Falls back to the 🪨 emoji. */
+  logo?: string;
+  /** Browser tab icon (path under public/). Falls back to the 🪨 emoji. */
+  favicon?: string;
   siteUrl: string;
   defaultTheme: 'white' | 'cream' | 'slate' | 'midnight';
   features?: SiteFeatures;
