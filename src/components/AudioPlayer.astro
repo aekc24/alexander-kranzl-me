@@ -1,16 +1,18 @@
 ---
 // src/components/AudioPlayer.astro
 // Accessible client-side Text-to-Speech audio reader using browser Web Speech API
+import { t } from '../i18n/ui';
+
 export interface Props {
   selector?: string;
   title?: string;
   label?: string;
 }
 
-const { selector = '.post-content', title = '', label = 'Listen to Article' } = Astro.props;
+const { selector = '.post-content', title = '', label = t('audio.label') } = Astro.props;
 ---
 
-<div id="audio-player-root" class="audio-player-card is-collapsed" data-selector={selector} data-title={title} aria-label="Accessible audio reader">
+<div id="audio-player-root" class="audio-player-card is-collapsed" data-selector={selector} data-title={title} aria-label={t('audio.region')} data-label-expand={t('audio.expand')} data-label-collapse={t('audio.collapse')}>
   <!-- Trigger Bar -->
   <button
     id="audio-toggle-btn"
@@ -18,7 +20,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
     class="audio-toggle-btn"
     aria-expanded="false"
     aria-controls="audio-player-drawer"
-    title="Expand audio player"
+    title={t('audio.expand')}
   >
     <div class="audio-toggle-left">
       <div class="audio-speaker-icon" aria-hidden="true">
@@ -31,12 +33,12 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
       <div class="audio-toggle-text">
         <span class="audio-label">{label}</span>
         <span class="audio-dot" aria-hidden="true">•</span>
-        <span id="audio-estimate" class="audio-estimate">Calculating...</span>
+        <span id="audio-estimate" class="audio-estimate">{t('audio.calculating')}</span>
       </div>
     </div>
 
     <div class="audio-toggle-right">
-      <span id="audio-status-badge" class="audio-status-badge">Ready to play</span>
+      <span id="audio-status-badge" class="audio-status-badge">{t('audio.ready')}</span>
       <span class="audio-chevron-icon" aria-hidden="true">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -46,14 +48,14 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
   </button>
 
   <!-- Drawer Container -->
-  <div id="audio-player-drawer" class="audio-player-drawer" role="region" aria-label="Audio player controls">
+  <div id="audio-player-drawer" class="audio-player-drawer" role="region" aria-label={t('audio.controls')}>
     <div class="audio-drawer-content">
       <div class="audio-drawer-divider" aria-hidden="true"></div>
 
       <!-- Controls Row -->
       <div class="audio-controls-row">
         <!-- Play / Pause -->
-        <button id="audio-play-btn" type="button" class="audio-btn audio-btn-primary" aria-label="Play audio">
+        <button id="audio-play-btn" type="button" class="audio-btn audio-btn-primary" aria-label={t('audio.playLabel')}>
           <svg class="icon-play" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <polygon points="5 3 19 12 5 21 5 3"></polygon>
           </svg>
@@ -61,26 +63,26 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
             <rect x="6" y="4" width="4" height="16"></rect>
             <rect x="14" y="4" width="4" height="16"></rect>
           </svg>
-          <span id="audio-play-text" class="audio-btn-text">Play</span>
+          <span id="audio-play-text" class="audio-btn-text">{t('audio.play')}</span>
         </button>
 
         <!-- Stop -->
-        <button id="audio-stop-btn" type="button" class="audio-btn audio-btn-secondary" aria-label="Stop playback" disabled>
+        <button id="audio-stop-btn" type="button" class="audio-btn audio-btn-secondary" aria-label={t('audio.stopLabel')} disabled>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <rect x="5" y="5" width="14" height="14" rx="2"></rect>
           </svg>
-          <span>Stop</span>
+          <span>{t('audio.stop')}</span>
         </button>
 
         <!-- Prev / Next Paragraph -->
         <div class="audio-nav-btns">
-          <button id="audio-prev-btn" type="button" class="audio-btn audio-btn-icon" aria-label="Previous paragraph" disabled title="Previous paragraph">
+          <button id="audio-prev-btn" type="button" class="audio-btn audio-btn-icon" aria-label={t('audio.prev')} disabled title={t('audio.prev')}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="19 20 9 12 19 4 19 20"></polygon>
               <line x1="5" y1="19" x2="5" y2="5"></line>
             </svg>
           </button>
-          <button id="audio-next-btn" type="button" class="audio-btn audio-btn-icon" aria-label="Next paragraph" disabled title="Next paragraph">
+          <button id="audio-next-btn" type="button" class="audio-btn audio-btn-icon" aria-label={t('audio.next')} disabled title={t('audio.next')}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="5 4 15 12 5 20 5 4"></polygon>
               <line x1="19" y1="5" x2="19" y2="19"></line>
@@ -90,7 +92,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
 
         <!-- Speed Rate Selector -->
         <div class="audio-rate-wrap">
-          <button type="button" id="audio-rate-btn" class="audio-rate-btn" aria-label="Playback speed" title="Adjust playback speed">
+          <button type="button" id="audio-rate-btn" class="audio-rate-btn" aria-label={t('audio.speed')} title={t('audio.speedTitle')}>
             <span id="audio-rate-val">1.0x</span>
           </button>
         </div>
@@ -102,7 +104,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
           <div id="audio-progress-fill" class="audio-progress-fill" style="width: 0%;"></div>
         </div>
         <div class="audio-progress-labels">
-          <span id="audio-part-label">Paragraph 0 of 0</span>
+          <span id="audio-part-label">{t('audio.partParagraph', { part: 0, parts: 0 })}</span>
           <span id="audio-pct-label">0%</span>
         </div>
       </div>
@@ -111,6 +113,8 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
 </div>
 
 <script>
+  import { t } from '../i18n/ui';
+
   let activeStickyObserver: IntersectionObserver | null = null;
   let audioPlayerGlobalInitialized = false;
 
@@ -196,7 +200,7 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
     const estMin = Math.max(1, Math.ceil(totalWords / 140)); // ~140 words/min speech rate
 
     if (estimateLabel) {
-      estimateLabel.textContent = `~${estMin} min narration (${parts.length} parts)`;
+      estimateLabel.textContent = t('audio.estimate', { min: estMin, parts: parts.length });
     }
 
     let currentIndex = 0;
@@ -232,12 +236,12 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
         root?.classList.add('is-expanded');
         root?.classList.remove('is-collapsed');
         toggleBtn?.setAttribute('aria-expanded', 'true');
-        toggleBtn?.setAttribute('title', 'Collapse audio player');
+        toggleBtn?.setAttribute('title', root?.dataset.labelCollapse ?? '');
       } else {
         root?.classList.remove('is-expanded');
         root?.classList.add('is-collapsed');
         toggleBtn?.setAttribute('aria-expanded', 'false');
-        toggleBtn?.setAttribute('title', 'Expand audio player');
+        toggleBtn?.setAttribute('title', root?.dataset.labelExpand ?? '');
       }
     }
 
@@ -258,23 +262,18 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
       if (progressFill) progressFill.style.width = `${pct}%`;
 
       const currentEl = textNodes[currentIndex];
-      let label = `Part ${currentIndex + 1} of ${parts.length}`;
+      const position = { part: currentIndex + 1, parts: parts.length };
+      let label = t('audio.part', position);
       if (currentEl) {
         if (currentEl.tagName === 'H1') {
-          label = targetLang.startsWith('pt')
-            ? `Título (${currentIndex + 1} de ${parts.length})`
-            : `Title (${currentIndex + 1} of ${parts.length})`;
+          label = t('audio.partTitle', position);
         } else if (
           currentEl.classList.contains('post-description') ||
           currentEl.classList.contains('project-description')
         ) {
-          label = targetLang.startsWith('pt')
-            ? `Subtítulo (${currentIndex + 1} de ${parts.length})`
-            : `Subtitle (${currentIndex + 1} of ${parts.length})`;
+          label = t('audio.partSubtitle', position);
         } else {
-          label = targetLang.startsWith('pt')
-            ? `Parágrafo ${currentIndex + 1} de ${parts.length}`
-            : `Paragraph ${currentIndex + 1} of ${parts.length}`;
+          label = t('audio.partParagraph', position);
         }
       }
 
@@ -351,23 +350,23 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
       if (isPlaying && !isPaused) {
         iconPlay?.classList.add('hidden');
         iconPause?.classList.remove('hidden');
-        if (playText) playText.textContent = 'Pause';
+        if (playText) playText.textContent = t('audio.pause');
         if (statusBadge) {
-          statusBadge.textContent = parts.length > 0 ? `Playing (${currentIndex + 1}/${parts.length})` : 'Playing...';
+          statusBadge.textContent = parts.length > 0 ? t('audio.playing', { part: currentIndex + 1, parts: parts.length }) : t('audio.playingNoParts');
         }
         root?.classList.add('is-playing');
         if (stopBtn) stopBtn.disabled = false;
       } else if (isPaused) {
         iconPlay?.classList.remove('hidden');
         iconPause?.classList.add('hidden');
-        if (playText) playText.textContent = 'Resume';
-        if (statusBadge) statusBadge.textContent = 'Paused';
+        if (playText) playText.textContent = t('audio.resume');
+        if (statusBadge) statusBadge.textContent = t('audio.paused');
         root?.classList.remove('is-playing');
       } else {
         iconPlay?.classList.remove('hidden');
         iconPause?.classList.add('hidden');
-        if (playText) playText.textContent = 'Play';
-        if (statusBadge) statusBadge.textContent = 'Ready to play';
+        if (playText) playText.textContent = t('audio.play');
+        if (statusBadge) statusBadge.textContent = t('audio.ready');
         root?.classList.remove('is-playing');
         if (stopBtn) stopBtn.disabled = true;
       }

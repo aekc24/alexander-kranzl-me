@@ -1,17 +1,14 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { siteConfig } from '../config/site';
+import { formatDate } from '../i18n/ui';
 
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric'
-});
+const formattedDate = formatDate(post.data.pubDate);
 const showTags = siteConfig.features?.tags !== false;
 ---
 

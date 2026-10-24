@@ -1,16 +1,17 @@
 ---
 // src/components/ThemeToggle.astro
 // Dropdown menu for Minrock themes (Clean White, Warm Paper, Slate Navy, Midnight OLED, Auto)
+import { t } from '../i18n/ui';
 ---
 
 <div class="theme-selector" id="theme-selector">
   <button
     id="theme-toggle-btn"
     class="theme-btn-trigger"
-    aria-label="Select color theme"
+    aria-label={t('theme.select')}
     aria-haspopup="true"
     aria-expanded="false"
-    title="Color theme / Tema visual"
+    title={t('theme.title')}
   >
     <span id="theme-active-icon" class="theme-active-icon">📜</span>
     <svg class="theme-chevron" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -19,13 +20,13 @@
   </button>
 
   <!-- Floating Theme Dropdown -->
-  <div id="theme-dropdown" class="theme-dropdown" role="menu" aria-label="Available themes">
-    <div class="theme-dropdown-header">THEME</div>
+  <div id="theme-dropdown" class="theme-dropdown" role="menu" aria-label={t('theme.available')}>
+    <div class="theme-dropdown-header">{t('theme.header')}</div>
 
     <button class="theme-option" data-theme-val="white" role="menuitem">
       <span class="theme-opt-left">
         <span class="theme-emoji">☀️</span>
-        <span class="theme-label">Clean White</span>
+        <span class="theme-label">{t('theme.white')}</span>
       </span>
       <svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </button>
@@ -33,7 +34,7 @@
     <button class="theme-option" data-theme-val="cream" role="menuitem">
       <span class="theme-opt-left">
         <span class="theme-emoji">📜</span>
-        <span class="theme-label">Warm Paper</span>
+        <span class="theme-label">{t('theme.cream')}</span>
       </span>
       <svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </button>
@@ -41,7 +42,7 @@
     <button class="theme-option" data-theme-val="slate" role="menuitem">
       <span class="theme-opt-left">
         <span class="theme-emoji">⚓</span>
-        <span class="theme-label">Slate Navy</span>
+        <span class="theme-label">{t('theme.slate')}</span>
       </span>
       <svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </button>
@@ -49,7 +50,7 @@
     <button class="theme-option" data-theme-val="midnight" role="menuitem">
       <span class="theme-opt-left">
         <span class="theme-emoji">🌌</span>
-        <span class="theme-label">Midnight OLED</span>
+        <span class="theme-label">{t('theme.midnight')}</span>
       </span>
       <svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </button>
@@ -59,7 +60,7 @@
     <button class="theme-option" data-theme-val="auto" role="menuitem">
       <span class="theme-opt-left">
         <span class="theme-emoji">💻</span>
-        <span class="theme-label">System Auto</span>
+        <span class="theme-label">{t('theme.auto')}</span>
       </span>
       <svg class="theme-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
     </button>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { t } from '../../i18n/ui';
 
 const posts = await getCollection('blog', ({ data }) => !data.draft);
 const projects = await getCollection('projects');
@@ -21,10 +22,10 @@ projects.forEach((proj) => {
 const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
 ---
 
-<BaseLayout title="Tags | Minrock" description="Explore articles by topic and tag.">
+<BaseLayout title={`${t('tags.pageTitle')} | Minrock`} description={t('tags.description')}>
   <header class="tags-header">
-    <h1 class="tags-h1">Explore by Tag</h1>
-    <p class="tags-subtitle">Browse notes and articles grouped by topics.</p>
+    <h1 class="tags-h1">{t('tags.title')}</h1>
+    <p class="tags-subtitle">{t('tags.subtitle')}</p>
   </header>
 
   <div class="tags-cloud">

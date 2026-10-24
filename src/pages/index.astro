@@ -4,6 +4,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../config/site';
+import { t } from '../i18n/ui';
 
 const heroSubtitle = siteConfig.heroSubtitle ?? siteConfig.tagline;
 
@@ -39,17 +40,17 @@ const topTags = [...tagsMap.entries()]
       </p>
     )}
     <div class="hero-actions">
-      <a href="/blog" class="btn btn-primary">Read Articles →</a>
-      {allProjects.length > 0 && <a href="/projects" class="btn btn-secondary">Explore Projects</a>}
-      <a href="/about" class="btn btn-tertiary">About</a>
+      <a href="/blog" class="btn btn-primary">{t('home.readArticles')}</a>
+      {allProjects.length > 0 && <a href="/projects" class="btn btn-secondary">{t('home.exploreProjects')}</a>}
+      <a href="/about" class="btn btn-tertiary">{t('home.about')}</a>
     </div>
   </section>
 
   <!-- Latest Notes -->
   <section class="recent-posts">
     <div class="section-header">
-      <h2 class="section-title">Latest Articles</h2>
-      <a href="/blog" class="all-link">View all ({allPosts.length}) →</a>
+      <h2 class="section-title">{t('home.latest')}</h2>
+      <a href="/blog" class="all-link">{t('home.viewAll', { count: allPosts.length })}</a>
     </div>
 
     <div class="posts-list">
@@ -63,8 +64,8 @@ const topTags = [...tagsMap.entries()]
   {featuredProjects.length > 0 && (
     <section class="featured-projects">
       <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <a href="/projects" class="all-link">All projects ({allProjects.length}) →</a>
+        <h2 class="section-title">{t('home.featuredProjects')}</h2>
+        <a href="/projects" class="all-link">{t('home.allProjects', { count: allProjects.length })}</a>
       </div>
 
       <div class="projects-grid">
@@ -90,8 +91,8 @@ const topTags = [...tagsMap.entries()]
   {siteConfig.features?.tags !== false && topTags.length > 0 && (
     <section class="home-tags-section">
       <div class="section-header">
-        <h2 class="section-title">Explore by Topics</h2>
-        <a href="/tags" class="all-link">All tags ({topTags.length}) →</a>
+        <h2 class="section-title">{t('home.topics')}</h2>
+        <a href="/tags" class="all-link">{t('home.allTags', { count: topTags.length })}</a>
       </div>
 
       <div class="tags-cloud">

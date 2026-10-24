@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
+import { t } from '../../i18n/ui';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog', ({ data }) => !data.draft);
@@ -37,21 +38,24 @@ const totalCount = posts.length + projects.length;
 
 <BaseLayout
   title={`#${tag} | Minrock`}
-  description={`Browse content tagged with #${tag}`}
+  description={t('tag.description', { tag })}
 >
   <header class="tag-header">
     <div class="tag-breadcrumb">
-      <a href="/tags">Tags</a>
+      <a href="/tags">{t('tag.breadcrumb')}</a>
       <span class="sep">/</span>
       <span class="current">#{tag}</span>
     </div>
-    <h1 class="tag-title">Content tagged with <span class="highlight">#{tag}</span></h1>
-    <p class="tag-count">{totalCount} {totalCount === 1 ? 'item' : 'items'} found ({posts.length} articles, {projects.length} projects)</p>
+    <h1 class="tag-title">{t('tag.title')} <span class="highlight">#{tag}</span></h1>
+    <p class="tag-count">
+      {t(totalCount === 1 ? 'tag.countOne' : 'tag.countOther', { count: totalCount })}{' '}
+      {t('tag.breakdown', { posts: posts.length, projects: projects.length })}
+    </p>
   </header>
 
   {posts.length > 0 && (
     <section class="tag-section">
-      <h2 class="section-title">Articles ({posts.length})</h2>
+      <h2 class="section-title">{t('tag.articles', { count: posts.length })}</h2>
       <div class="posts-list">
         {posts.map((post) => (
           <ArticleCard post={post} />
@@ -62,7 +66,7 @@ const totalCount = posts.length + projects.length;
 
   {projects.length > 0 && (
     <section class="tag-section projects-tag-section">
-      <h2 class="section-title">Projects ({projects.length})</h2>
+      <h2 class="section-title">{t('tag.projects', { count: projects.length })}</h2>
       <div class="projects-grid">
         {projects.map((proj) => (
           <ProjectCard

@@ -1,4 +1,5 @@
 import { getCollection } from 'astro:content';
+import { formatDate, uiLang } from '../i18n/ui';
 
 export async function GET() {
   const posts = (await getCollection('blog', ({ data }) => !data.draft))
@@ -35,11 +36,7 @@ export async function GET() {
       title: p.data.title,
       description: p.data.description,
       url: `/blog/${p.id}`,
-      date: p.data.pubDate.toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-      }),
+      date: formatDate(p.data.pubDate),
       tags: p.data.tags || [],
     })),
     projects: projects.map((p) => ({
@@ -48,7 +45,7 @@ export async function GET() {
       title: p.data.title,
       description: p.data.description,
       url: `/projects/${p.id}`,
-      date: p.data.date.toLocaleDateString('en-US', {
+      date: p.data.date.toLocaleDateString(uiLang, {
         month: 'short',
         year: 'numeric',
       }),

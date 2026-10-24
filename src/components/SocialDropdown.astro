@@ -2,16 +2,17 @@
 // src/components/SocialDropdown.astro
 // Compact dropdown menu grouping social media and contact links
 import { siteConfig } from '../config/site';
+import { t } from '../i18n/ui';
 ---
 
 <div class="social-dropdown-container" id="social-dropdown-container">
   <button
     id="social-menu-btn"
     class="social-btn-trigger"
-    aria-label="Connect and social links"
+    aria-label={t('social.label')}
     aria-haspopup="true"
     aria-expanded="false"
-    title="Connect / Redes e Contato"
+    title={t('social.title')}
   >
     <!-- Social / At icon -->
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -24,8 +25,8 @@ import { siteConfig } from '../config/site';
   </button>
 
   <!-- Floating Social Dropdown -->
-  <div id="social-dropdown-menu" class="social-dropdown-menu" role="menu" aria-label="Social and contact options">
-    <div class="social-dropdown-header">CONNECT</div>
+  <div id="social-dropdown-menu" class="social-dropdown-menu" role="menu" aria-label={t('social.menu')}>
+    <div class="social-dropdown-header">{t('social.header')}</div>
 
     {siteConfig.socialLinks.linkedin && (
       <a
@@ -42,7 +43,7 @@ import { siteConfig } from '../config/site';
         </span>
         <div class="social-item-info">
           <span class="social-item-name">LinkedIn</span>
-          <span class="social-item-handle">↗ Profile</span>
+          <span class="social-item-handle">{t('social.profile')}</span>
         </div>
       </a>
     )}
@@ -62,7 +63,7 @@ import { siteConfig } from '../config/site';
         </span>
         <div class="social-item-info">
           <span class="social-item-name">GitHub</span>
-          <span class="social-item-handle">↗ Repository</span>
+          <span class="social-item-handle">{t('social.repository')}</span>
         </div>
       </a>
     )}
@@ -82,8 +83,8 @@ import { siteConfig } from '../config/site';
           </svg>
         </span>
         <div class="social-item-info">
-          <span class="social-item-name">Email</span>
-          <span class="social-item-handle">↗ Send message</span>
+          <span class="social-item-name">{t('social.email')}</span>
+          <span class="social-item-handle">{t('social.sendMessage')}</span>
         </div>
       </a>
     )}

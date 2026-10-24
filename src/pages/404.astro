@@ -1,17 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/ui';
 ---
 
-<BaseLayout title="404 — Page Not Found" description="The page you are looking for does not exist.">
+<BaseLayout title={t('notFound.pageTitle')} description={t('notFound.description')}>
   <div class="not-found-container">
     <div class="not-found-badge">404</div>
-    <h1 class="not-found-title">Page Not Found</h1>
+    <h1 class="not-found-title">{t('notFound.title')}</h1>
     <p class="not-found-text">
-      The note or article you are trying to access has been moved, renamed, or no longer exists in this vault.
+      {t('notFound.text')}
     </p>
     <div class="not-found-actions">
-      <a href="/" class="btn-primary">Return to Home</a>
-      <a href="/blog" class="btn-secondary">Browse All Articles</a>
+      <a href="/" class="btn-primary">{t('notFound.home')}</a>
+      <a href="/blog" class="btn-secondary">{t('notFound.articles')}</a>
     </div>
   </div>
 </BaseLayout>

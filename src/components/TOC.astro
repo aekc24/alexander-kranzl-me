@@ -1,16 +1,17 @@
 ---
 // Sticky Table of Contents (TOC) with scrollspy
+import { t } from '../i18n/ui';
 export interface Props {
   headings: { depth: number; slug: string; text: string }[];
   title?: string;
 }
 
-const { headings, title = 'On This Page' } = Astro.props;
+const { headings, title = t('toc.title') } = Astro.props;
 const filtered = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
 ---
 
 {filtered.length > 0 && (
-  <nav class="toc" aria-label="Table of contents">
+  <nav class="toc" aria-label={t('toc.label')}>
     <div class="toc-title">{title}</div>
     <ol class="toc-list">
       {filtered.map((h) => (

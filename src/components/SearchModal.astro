@@ -3,12 +3,13 @@
 // Global Search Modal with rich result cards, fuzzy matching, and keyboard navigation (Ctrl + K)
 import { getCollection } from 'astro:content';
 import { siteConfig } from '../config/site';
+import { t } from '../i18n/ui';
 
 const hasProjects = (await getCollection('projects')).length > 0;
 ---
 
 <!-- Search Modal Backdrop & Container -->
-<div id="search-modal-backdrop" class="search-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Global Search">
+<div id="search-modal-backdrop" class="search-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label={t('search.dialog')}>
   <div class="search-dialog" id="search-modal-dialog">
     <!-- Header -->
     <div class="search-dialog-header">
@@ -21,20 +22,20 @@ const hasProjects = (await getCollection('projects')).length > 0;
           type="text"
           id="search-modal-input"
           class="search-input"
-          placeholder={hasProjects ? 'Search articles, projects, topics, tags...' : 'Search articles, topics, tags...'}
+          placeholder={t(hasProjects ? 'search.placeholderProjects' : 'search.placeholder')}
           autocomplete="off"
           autocorrect="off"
           autocapitalize="off"
           spellcheck="false"
         />
-        <button id="search-modal-clear" class="search-clear-btn" aria-label="Clear search" type="button" style="display: none;">
+        <button id="search-modal-clear" class="search-clear-btn" aria-label={t('search.clear')} type="button" style="display: none;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
-      <button id="search-modal-close" class="search-close-badge" type="button" aria-label="Close search (Esc)" title="Close (Esc)">
+      <button id="search-modal-close" class="search-close-badge" type="button" aria-label={t('search.closeLabel')} title={t('search.closeTitle')}>
         <kbd class="kbd-esc">ESC</kbd>
       </button>
     </div>
@@ -42,44 +43,42 @@ const hasProjects = (await getCollection('projects')).length > 0;
     <!-- Results Area -->
     <div id="search-modal-results" class="search-dialog-body" tabindex="-1">
       <div class="search-initial-state">
-        <div class="initial-section-title">Quick Access &amp; Navigation</div>
+        <div class="initial-section-title">{t('search.quickAccess')}</div>
         <div class="initial-shortcuts">
           <a href="/blog" class="initial-pill">
             <span class="pill-icon">📄</span>
-            <span>All Articles</span>
+            <span>{t('search.allArticles')}</span>
           </a>
           {hasProjects && (
             <a href="/projects" class="initial-pill">
               <span class="pill-icon">📦</span>
-              <span>All Projects</span>
+              <span>{t('search.allProjects')}</span>
             </a>
           )}
           <a href="/tags" class="initial-pill">
             <span class="pill-icon">🏷️</span>
-            <span>All Tags</span>
+            <span>{t('search.allTags')}</span>
           </a>
           <a href="/about" class="initial-pill">
             <span class="pill-icon">👤</span>
-            <span>About</span>
+            <span>{t('search.about')}</span>
           </a>
         </div>
-        <div class="initial-hint">
-          Type any keyword (e.g., <code>obsidian</code>, <code>astro</code>, <code>typography</code>, <code>scatterleaf</code>) to filter in real-time.
-        </div>
+        <div class="initial-hint" set:html={t('search.hint')} />
       </div>
     </div>
 
     <!-- Footer -->
     <div class="search-dialog-footer">
       <div class="search-shortcuts-guide">
-        <span class="guide-item"><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
-        <span class="guide-item"><kbd>↵</kbd> Select</span>
-        <span class="guide-item"><kbd>ESC</kbd> Close</span>
+        <span class="guide-item"><kbd>↑</kbd><kbd>↓</kbd> {t('search.navigate')}</span>
+        <span class="guide-item"><kbd>↵</kbd> {t('search.select')}</span>
+        <span class="guide-item"><kbd>ESC</kbd> {t('search.close')}</span>
       </div>
       <div class="search-brand-note">
         {siteConfig.logo
           ? <img src={siteConfig.logo} alt="" class="search-brand-logo" width="14" height="14" />
-          : '🪨'} {siteConfig.title} Search
+          : '🪨'} {t('search.brand', { title: siteConfig.title })}
       </div>
     </div>
   </div>
@@ -87,6 +86,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
 
 <script>
   import { getTechIconSvg, getDefaultDocIcon } from '../utils/techIcons';
+  import { t } from '../i18n/ui';
 
   interface SearchItem {
     id: string;
@@ -250,7 +250,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
       resultsContainer.innerHTML = `
         <div class="search-empty">
           <div class="search-empty-icon">⏳</div>
-          <div class="search-empty-title">Loading search index...</div>
+          <div class="search-empty-title">${escapeHtml(t('search.loading'))}</div>
         </div>
       `;
       return;
@@ -313,8 +313,8 @@ const hasProjects = (await getCollection('projects')).length > 0;
       resultsContainer.innerHTML = `
         <div class="search-empty">
           <div class="search-empty-icon">🔍</div>
-          <div class="search-empty-title">No results found for "${escapeHtml(cleanQuery)}"</div>
-          <div class="search-empty-desc">Try searching for keywords like <code>obsidian</code>, <code>astro</code>, <code>vault</code> or <code>ssg</code>.</div>
+          <div class="search-empty-title">${escapeHtml(t('search.noResults', { query: cleanQuery }))}</div>
+          <div class="search-empty-desc">${t('search.noResultsHint')}</div>
         </div>
       `;
       selectedIndex = -1;
@@ -329,7 +329,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
       html += `
         <div class="search-category-group">
           <div class="search-category-title">
-            <span>📄 Blog Articles</span>
+            <span>${escapeHtml(t('search.articles'))}</span>
             <span class="search-category-count">${matchedPosts.length}</span>
           </div>
       `;
@@ -358,7 +358,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
       html += `
         <div class="search-category-group">
           <div class="search-category-title">
-            <span>📦 Projects</span>
+            <span>${escapeHtml(t('search.projects'))}</span>
             <span class="search-category-count">${matchedProjects.length}</span>
           </div>
       `;
@@ -369,11 +369,11 @@ const hasProjects = (await getCollection('projects')).length > 0;
             <div class="search-result-content">
               <div class="search-result-top">
                 <div class="search-result-title">${highlightText(proj.title, cleanQuery)}</div>
-                <div class="search-result-meta">${proj.category || 'Project'}</div>
+                <div class="search-result-meta">${escapeHtml(proj.category || t('search.project'))}</div>
               </div>
               <div class="search-result-desc">${highlightText(proj.description, cleanQuery)}</div>
               <div class="search-result-tags">
-                <span class="search-result-badge series-badge">⚡ ${escapeHtml(proj.category || 'Project')}</span>
+                <span class="search-result-badge series-badge">⚡ ${escapeHtml(proj.category || t('search.project'))}</span>
                 ${proj.tags.slice(0, 3).map((t) => `<span class="search-result-badge">#${highlightText(t, cleanQuery)}</span>`).join('')}
               </div>
             </div>
@@ -388,7 +388,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
       html += `
         <div class="search-category-group">
           <div class="search-category-title">
-            <span>🏷️ Tags &amp; Topics</span>
+            <span>${escapeHtml(t('search.tags'))}</span>
             <span class="search-category-count">${matchedTags.length}</span>
           </div>
           <div class="search-tags-grid">

@@ -8,6 +8,7 @@ import StructuredData from '../../components/StructuredData.astro';
 import Comments from '../../components/Comments.astro';
 import { getCollection, getEntry, render } from 'astro:content';
 import { siteConfig } from '../../config/site';
+import { t, formatDate } from '../../i18n/ui';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -41,11 +42,7 @@ const versions = original
     })
   : [];
 
-const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-});
+const formattedDate = formatDate(post.data.pubDate, 'long');
 
 // Reading time calculation
 const words = (post.body ?? '').split(/\s+/).filter(Boolean).length;
@@ -93,7 +90,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  {readingMin} min read
+                  {t('post.minRead', { min: readingMin })}
                 </span>
               </>
             )}
@@ -113,7 +110,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
           <p class="post-description">{post.data.description}</p>
 
           {versions.length > 1 && (
-            <nav class="post-langs" aria-label="Language">
+            <nav class="post-langs" aria-label={t('post.language')}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M2 12h20"></path>
@@ -130,7 +127,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
 
         <!-- 🔊 Accessible Audio Player (Text-to-Speech) -->
         {showAudio && post.data.audio !== false && (
-          <AudioPlayer selector=".post-content" title={post.data.title} label="Listen to Article" />
+          <AudioPlayer selector=".post-content" title={post.data.title} label={t('audio.label')} />
         )}
 
         {post.data.image && (
@@ -148,10 +145,10 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
         )}
 
         <!-- Prev / Next Navigation -->
-        <nav class="post-nav" aria-label="Post navigation">
+        <nav class="post-nav" aria-label={t('post.navigation')}>
           {prevPost ? (
             <a href={`/blog/${prevPost.id}`} class="nav-card nav-prev">
-              <span class="nav-direction">← Older</span>
+              <span class="nav-direction">{t('post.older')}</span>
               <span class="nav-title">{prevPost.data.title}</span>
             </a>
           ) : (
@@ -159,7 +156,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
           )}
           {nextPost ? (
             <a href={`/blog/${nextPost.id}`} class="nav-card nav-next">
-              <span class="nav-direction">Newer →</span>
+              <span class="nav-direction">{t('post.newer')}</span>
               <span class="nav-title">{nextPost.data.title}</span>
             </a>
           ) : (
@@ -174,8 +171,8 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
 
     <!-- Sticky Sidebar Column (TOC) -->
     {showToc && (
-      <aside class="post-sidebar" aria-label="Article Table of Contents">
-        <TOC headings={headings} title="On This Page" />
+      <aside class="post-sidebar" aria-label={t('post.tocRegion')}>
+        <TOC headings={headings} />
       </aside>
     )}
   </div>
