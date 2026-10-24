@@ -29,7 +29,7 @@ const topTags = [...tagsMap.entries()]
 <BaseLayout>
   <section class="hero">
     <h1 class="hero-title">
-      Crafted for deep thinking &amp; technical writing.
+      {siteConfig.heroTitle ?? 'Crafted for deep thinking & technical writing.'}
     </h1>
     <p class="hero-subtitle">
       {siteConfig.tagline}
@@ -37,7 +37,7 @@ const topTags = [...tagsMap.entries()]
     <div class="hero-actions">
       <a href="/blog" class="btn btn-primary">Read Articles →</a>
       {allProjects.length > 0 && <a href="/projects" class="btn btn-secondary">Explore Projects</a>}
-      <a href="/about" class="btn btn-tertiary">About Minrock</a>
+      <a href="/about" class="btn btn-tertiary">About</a>
     </div>
   </section>
 
