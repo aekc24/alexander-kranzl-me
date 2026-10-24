@@ -114,11 +114,11 @@ export const siteConfig: SiteConfig = {
     github: 'https://github.com/aekc24'
   },
   navLinks: [
-    { title: 'Home', href: '/' },
+    { title: 'Start', href: '/' },
     { title: 'Blog', href: '/blog' },
     { title: 'Geschichten', href: '/geschichten' },
     { title: 'Tags', href: '/tags' },
-    { title: 'About', href: '/about' }
+    { title: 'Über mich', href: '/about' }
   ],
   comments: {
     enabled: false,
