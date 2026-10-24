@@ -7,7 +7,7 @@ import AudioPlayer from '../../components/AudioPlayer.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import Comments from '../../components/Comments.astro';
 import { getCollection, getEntry, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { siteConfig } from '../../config/site';
 import { t, formatDate } from '../../i18n/ui';
 
@@ -58,6 +58,11 @@ const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 
 const currentUrl = new URL(Astro.url.pathname, siteConfig.siteUrl).href;
 
+// Link previews show the post's cover; a cover next to the post becomes a 1200px JPEG
+const previewImage = typeof post.data.image === 'string'
+  ? post.data.image
+  : post.data.image && (await getImage({ src: post.data.image, width: 1200, format: 'jpg' })).src;
+
 const features = siteConfig.features ?? {};
 const showReadingTime = features.readingTime !== false;
 const showTags = features.tags !== false;
@@ -66,7 +71,7 @@ const showShare = features.socialShare !== false;
 const showToc = features.tableOfContents !== false && headings.length > 0;
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} wide={true}>
+<BaseLayout title={post.data.title} description={post.data.description} image={previewImage} wide={true}>
   <StructuredData
     type="article"
     title={post.data.title}
