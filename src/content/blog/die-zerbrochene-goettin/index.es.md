@@ -6,58 +6,78 @@ tags: ["kurzgeschichten"]
 lang: es
 ---
 
-El crepúsculo cayó sobre la ciudad. Las luces de las farolas iluminaban los callejones vacíos con una luz inquietante pero cálida. En los parques y zonas verdes, las hojas yacían sobre el suelo frío y húmedo. Los últimos rayos de sol caían sobre el paisaje otoñal de tonos rojizos y marrones. A esta hora, ya quedaba poca gente en la calle. La mayoría de las personas estaban sentadas en sus cálidos apartamentos en lugar de helarse de frío. La ligera llovizna le daba en la cara. La humedad le resbalaba por la nuca hasta el cuello de su jersey, haciéndole estremecer cada vez. Para muchos, el otoño era la época del frío, la humedad, la oscuridad y el cambio. La gente también se abastecía de provisiones, películas para ver y libros para leer. También ganaban sus kilos de invierno y acumulaban montones de té y jerséis.
+Anochecía sobre la ciudad. Las farolas bañaban los callejones vacíos con una luz inquietante, pero cálida. En los parques y jardines, las hojas cubrían el suelo frío y mojado. Los últimos rayos de sol se posaban sobre el paisaje otoñal, teñido de rojos y pardos. A esas horas ya quedaba poca gente en la calle. La mayoría estaba en casa, al calor, en lugar de quedarse helada a la intemperie. La llovizna le soplaba en la cara. El agua le resbalaba por la nuca hasta el cuello del jersey y cada vez le arrancaba un escalofrío. Para muchos, el otoño era la estación del frío, de la humedad y de la oscuridad; la estación de los cambios. La gente hacía acopio de provisiones, de películas para ver y de libros para leer. También acumulaba algún kilo de más para el invierno, y tés y jerséis a montones.
 
-En realidad, solo iba a ser un paseo, pero de alguna manera se había convertido en una excursión de observaciones, pensó Ralph. Qué fascinante cómo uno puede desviarse tan rápido del asunto principal. Una sonrisa apareció en su rostro. Volvió a las calles iluminadas. Los últimos metros en el parque simplemente había que disfrutarlos. Era tan hermoso. Las hojas que crujían y el suelo húmedo que chapoteaba bajo sus zapatos. Pero ahora tenía que irse a casa, pensó Ralph. Sus pies pisaron la calle vacía y emprendió el camino hacia su apartamento. Poco tiempo después, estaba frente a la puerta de su casa. Quiso girar la llave en la cerradura, pero de pronto la puerta se abrió de par en par. Ralph entró y miró a su alrededor. El apartamento estaba destrozado y había cosas tiradas por todas partes. Prendas de vestir habían sido arrancadas de los armarios, libros de las estanterías y la vajilla yacía hecha añicos en el suelo. ¿Cómo había podido pasar esto? Ralph corrió a su sala de estar. La estatua de Afrodita, que normalmente estaba en la esquina junto al piano... no quedaba nada de ella. El joven cayó de rodillas y las lágrimas corrieron por sus mejillas. "Era tan hermosa. Y ahora todo está destruido. Lo siento tanto, hermana".
+En realidad solo iba a ser un paseo, pero, sin saber muy bien cómo, se había convertido en una excursión de observación, pensó Ralph. Qué curioso lo deprisa que uno se desvía de lo que pretendía hacer. Se le dibujó una sonrisa en la cara. Volvió a las calles iluminadas. Los últimos metros del parque había que saborearlos sin más. Era tan bonito. Las hojas que crujían y la tierra húmeda que chapoteaba bajo sus zapatos. Pero ya tocaba volver a casa, pensó Ralph. Pisó la calle vacía y se encaminó hacia su piso. Poco después estaba delante de su puerta. Quiso girar la llave en la cerradura, pero la puerta se abrió sola. Ralph entró y miró a su alrededor. El piso estaba patas arriba y había cosas tiradas por todas partes. La ropa, arrancada de los armarios; los libros, de las estanterías; la vajilla yacía hecha añicos en el suelo. ¿Cómo había podido pasar algo así? Ralph corrió al salón. La estatua de Afrodita, la que siempre estaba en el rincón, junto al piano. No quedaba nada de ella. El joven cayó de rodillas y las lágrimas le rodaron por las mejillas. «Era tan bonita. Y ahora está todo destrozado. Lo siento muchísimo, hermana».
 
-En la calle, un hombre solitario estaba parado y miraba la ventana de la sala de estar. Miró a la izquierda, luego a la derecha. Cuando se aseguró de que nadie lo veía, la figura se escabulló y desapareció tras la siguiente esquina de la calle. Pero Ralph no se dio cuenta de nada de esto. Solo yacía en su cama y sollozaba en su almohada. Las lágrimas fluyeron durante algún tiempo, pero tampoco pudo resistirse a los ojos que se le cerraban y se quedó dormido.
+En la calle, un hombre solitario observaba la ventana del salón. Miró a la izquierda, luego a la derecha. Cuando se hubo asegurado de que nadie lo veía, la figura se escabulló y desapareció tras la siguiente esquina. Pero Ralph no se enteró de nada. Estaba tumbado en la cama, sollozando contra la almohada. Las lágrimas siguieron corriendo un buen rato, hasta que tampoco él pudo resistirse a los párpados que se le cerraban, y se quedó dormido.
 
-A la mañana siguiente, al levantarse, Ralph ni siquiera se había dado cuenta de los fragmentos en el suelo. Solo cuando los pisó con el café en la mano, el recuerdo de la noche anterior lo golpeó como una flecha en el pecho. Todos los fragmentos acabaron en la basura, junto con un montón de lágrimas que habían caído.
+A la mañana siguiente, al levantarse, Ralph ni siquiera reparó en los añicos del suelo. Solo cuando los pisó, con el café en la mano, el recuerdo de la noche anterior se le clavó en el pecho como una flecha. Todos los pedazos acabaron en la basura, junto con un puñado de lágrimas que habían ido cayendo.
 
-La mañana era lúgubre. Afuera llovía y un viento helado soplaba por las calles solitarias. Pero, sin embargo, Ralph decidió salir. A pesar de todo, disfrutaba de vagar como un fantasma por la ciudad vacía. Pero hoy algo era diferente. Algo flotaba en el aire, algo oscuro. El joven justo bajaba por la gran calle comercial cuando un hombre se cruzó con él. "Hola, Ralph. ¿Qué haces tan temprano solo en las calles?".
+Era una mañana sombría. Fuera llovía y un viento helado barría las calles desiertas. Aun así, Ralph decidió salir. Pese a todo, disfrutaba vagando como un fantasma por la ciudad vacía. Pero aquel día algo era distinto. Algo flotaba en el aire, algo oscuro. El joven bajaba por la gran calle comercial cuando un hombre le salió al paso.
 
-Ralph levantó la vista y reconoció la figura que tenía delante. Era un conocido que trabajaba en la cafetería justo a la vuelta de la esquina.
+—Hola, Ralph. ¿Qué haces tan temprano tú solo por la calle?
 
-"Un pequeño paseo. ¿Y tú? ¿Cómo estás?", preguntó Ralph.
+Ralph levantó la vista y reconoció a quien tenía delante. Era un conocido que trabajaba en la cafetería de la esquina.
 
-"Bien. Yo también estaba dando un pequeño paseo, pero de repente apareció ese hombre tan extraño. Me preguntó si sabía dónde vives. Pero, por supuesto, le dije que 'no'. No soy tan estúpido como para decirle a un completo desconocido dónde vive mi amigo. ¿Lo conoces?".
+—Dando un paseíto. ¿Y tú? ¿Qué tal estás? —preguntó Ralph.
 
-"No, nunca he oído hablar de él".
+—Bien. Yo también estaba dando una vuelta, pero de repente ha aparecido un tipo muy raro. Me ha preguntado si sabía dónde vives. Le he dicho que no, claro. No soy tan idiota como para contarle a un completo desconocido dónde vive un amigo. ¿Lo conoces?
 
-"Vale, entonces es raro", dijo el hombre poniendo cara de disgusto, "realmente me habría gustado saber quién está tan interesado en conocerte. Pero supongo que no podrá ser".
+—No, no me suena de nada.
 
-Ralph miró brevemente su reloj. Tenía que estar de vuelta en casa en diez minutos. Su hermana lo llamaría a su móvil, que por supuesto había vuelto a olvidar en su apartamento.
+—Vaya, pues qué raro —dijo el hombre con cara de fastidio—. Me habría encantado saber quién tiene tanto interés en conocerte. Pero bueno, qué le vamos a hacer.
 
-"Tengo que volver a casa ahora. Saludos a tu mujer y cuídate, Pablo". Entonces Ralph se puso en marcha. Caminó por las calles y callejones abandonados. Aquí y allá todavía había sillas y mesas de restaurantes afuera, pero ya nadie se sentaría allí. Periódicos viejos volaban sobre las aceras solitarias. Ralph estaba a punto de llegar a su casa cuando de repente se detuvo. Algo se sentía raro. Dio los últimos pasos con cuidado. Frente a su casa se dio la vuelta. ¿No había justo ahí una sombra? Con un mal presentimiento en el estómago, giró la llave en la cerradura y entró en el apartamento.
+Ralph echó un vistazo al reloj. Tenía que estar en casa en diez minutos. Su hermana iba a llamarle al móvil, que, cómo no, se había vuelto a dejar en el piso.
 
-Una figura volvió a pararse frente a la casa de Ralph Jelanowski. Se acercó al timbre, pero solo miró la placa con el nombre. Así que había recordado el apellido correctamente. Miró brevemente hacia el apartamento, que estaba en el tercer piso, y dio media vuelta. Caminó unos metros más a hurtadillas y luego desapareció en el laberinto de callejones y calles.
+—Tengo que volver ya a casa. Dale recuerdos a tu mujer y cuídate, Pablo.
 
-El zumbido rítmico del cepillo de dientes era lo único que se podía escuchar en el baño. Ralph estaba frente al espejo en pijama y pensaba en el día. En lo extraño que había sido. Ese hombre del que hablaba Pablo. Y Ralph también tenía la sensación de estar siendo observado. Pero hoy estaba visiblemente demasiado cansado para seguir pensando en ello. Se arrastró hasta su cama y se tumbó en ella. Se olvidó de las pastillas para dormir de su mesita de noche.
+Y Ralph se puso en camino. Recorrió las calles y los callejones desiertos. Aquí y allá aún quedaban sillas y mesas de restaurantes en la calle, pero ya nadie iba a sentarse en ellas. Periódicos viejos volaban sobre las aceras solitarias. Ralph estaba ya muy cerca de su casa cuando, de pronto, se detuvo. Algo no encajaba. Recorrió los últimos pasos con cautela. Delante del portal se dio la vuelta. ¿No acababa de pasar una sombra? Con un nudo en el estómago, giró la llave en la cerradura y entró en el piso.
 
-Ralph soñó algo peculiar. Un hombre fue a su casa y le preguntó su nombre. Después le dijo: "Ten cuidado con el hombre de negro", y desapareció. Pero cuando Ralph se despertó, no podía recordar nada de eso.
+Una figura volvió a plantarse delante de la casa de Ralph Jelanowski. Se acercó al timbre, pero solo miró la placa con los nombres. Así que había recordado bien el apellido. Echó otro vistazo rápido hacia el piso, en la tercera planta, y dio media vuelta. Avanzó unos metros más con sigilo y luego se perdió en el laberinto de callejones y calles.
 
-Amaneció un nuevo día. A las 7 de la mañana ya se podía oler el delicioso aroma del huevo frito que se doraba en la sartén. De repente, el teléfono empezó a sonar. Su sonido estridente resonó por todas las habitaciones del pequeño apartamento. Adormilado, se acercó arrastrando los pies a su móvil. Ralph pulsó el botón verde. "Sí, hola. Habla Ralph Jelanowski".
+El zumbido rítmico del cepillo de dientes era lo único que se oía en el cuarto de baño. Ralph, en pijama, estaba frente al espejo repasando el día. Qué día tan extraño. Aquel hombre del que hablaba Pablo. Y Ralph también había tenido la sensación de que lo observaban. Pero aquella noche estaba a todas luces demasiado cansado para darle más vueltas. Fue a trompicones hasta la cama y se tumbó. Se olvidó de las pastillas para dormir de la mesilla.
 
-Por el auricular salió una voz profunda, casi metálica: "Habla una persona que no quiere ser nombrada. Pero seré breve. ¿Qué es más fuerte que el cetro de Zeus?".
+Ralph soñó algo extraño. Un hombre se presentaba en su casa y le preguntaba cómo se llamaba. Después le decía: «Guárdate del hombre de negro», y desaparecía. Pero al despertar, Ralph no recordaba nada de aquello.
 
-Antes de que Ralph pudiera responder, sonó el tono de marcar, pero cuando Ralph miró la pantalla de su smartphone, solo decía 'Llamada finalizada'.
+Amaneció un nuevo día. A las siete ya olía a huevo frito chisporroteando en la sartén. De pronto sonó el teléfono. El timbre estridente atravesó todas las habitaciones del pequeño piso. Medio dormido, fue arrastrando los pies hasta el móvil. Ralph pulsó la tecla verde.
 
-Se sorprendió a sí mismo queriendo devolver la llamada al número, pero la llamada, por supuesto, había sido anónima. De vuelta en la cocina, el desayuno fue devorado en un abrir y cerrar de ojos. De buen humor, Ralph decidió no salir hoy, sino quedarse en casa. Se tumbó en el sofá, encendió la televisión y fue cambiando de canal. Cuando por fin encontró una película interesante, sacó algo de fruta de la nevera y disfrutó de la película. Pero Ralph todavía estaba muy cansado. "Solo un par de minutos", se dijo a sí mismo. Se acomodó la almohada y se quedó dormido.
+—Sí, ¿diga? Al habla Ralph Jelanowski.
 
-De repente, un ruido lo despertó sobresaltado. En la televisión seguía emitiéndose la misma película. Pero no había sido eso lo que lo había sacado del sueño. Entonces lo vio. La ventana estaba destrozada y el suelo estaba cubierto de cristales rotos. Ralph se acercó con cuidado a la ventana para no cortarse. Una vez allí, miró hacia la calle. No se veía a nadie. Las calles estaban completamente vacías, como cada mañana.
+Del auricular salió una voz grave, casi metálica:
 
-"¿A quién tenemos aquí?". Ralph dio un respingo. Lentamente se dio la vuelta. "No pensé que nos volveríamos a ver tan pronto", dijo un hombre. Tenía una barba larga. Había algo raro en él. Ralph dio involuntariamente un paso atrás. "¿Quién eres?", preguntó con cautela.
+—Te habla alguien que prefiere no decir su nombre. Pero seré breve. ¿Qué es más fuerte que el cetro de Zeus?
 
-"No quiero que me llamen por mi nombre. Pero una cosa te puedo decir: yo en tu lugar tendría un poco más de... ¿cómo decirlo?... cuidado". El hombre dio un paso atrás. "¡Nos vemos, Ralph!". Con estas palabras salió del salón y cerró la puerta tras de sí. Cuando Ralph recuperó la compostura, el extraño hombre ya no estaba a la vista. El resto del día, Ralph estuvo pensando en la pregunta que el hombre desconocido le había hecho días atrás. ¿Qué es más fuerte que el cetro de Zeus? Estaba tan absorto que casi no encuentra la puerta de su casa cuando volvió. Los últimos rayos de sol entraron en la habitación e iluminaron el polvo. Ralph se preparó una taza de café y fue a su habitación. Se acercó a la estantería y buscó una lectura adecuada. Su mirada se posó en un libro algo más antiguo. "Dioses de la mitología griega" destacaba en letras doradas en el lomo. Lo tomó en sus manos y lo abrió. De repente lo vio. Simplemente estaba ahí. "Afrodita. La diosa del amor es una de las...", leyó en voz alta. Y de repente lo entendió todo. La estatua era de Afrodita. El hombre le había dicho qué era más fuerte que el cetro de Zeus. Era el amor. Pero, ¿qué quería el ladrón? Ralph cogió el teléfono y marcó el número de su hermana.
+Antes de que Ralph pudiera contestar, se cortó la línea, y cuando miró la pantalla del móvil, solo aparecía «Llamada finalizada».
 
-"Hola, Ralph. Qué bien que vuelvas a ponerte en contacto. ¿Cómo estás?".
+Se sorprendió a punto de devolver la llamada, pero, claro, el número era oculto. De vuelta en la cocina, el desayuno desapareció en un abrir y cerrar de ojos. De buen humor, Ralph decidió que aquel día no saldría, que se quedaría en casa. Se tumbó en el sofá, encendió la tele y fue pasando de un canal a otro. Cuando por fin encontró una película interesante, sacó algo de fruta de la nevera y se puso a verla. Pero Ralph seguía muy cansado. «Solo un par de minutos», se dijo. Se colocó bien el cojín y se quedó dormido.
 
-"Bien, pero tengo que contarte algo".
+De pronto, un ruido lo arrancó del sueño. En la tele seguía la misma película. Pero no era eso lo que lo había despertado. Entonces lo vio. La ventana estaba hecha añicos y el suelo, sembrado de cristales rotos. Ralph se acercó a la ventana con mucho cuidado, para no cortarse. Una vez allí, miró hacia la calle. No se veía a nadie. Como todas las mañanas, las calles estaban completamente vacías.
 
-"¿Recuerdas la estatua que me regalaste? Alguien la ha destruido. Pero no sé por qué...". De repente, Ralph se quedó perplejo. Fue al salón con el móvil en la oreja y miró detenidamente el lugar donde había estado la estatua. Aún quedaban algunos fragmentos en el suelo. Recogió uno y le dio la vuelta. En la parte de atrás había partes de un texto. Cogió los demás fragmentos y leyó en voz alta lo que estaba escrito. "No he desaparecido. Me he escondido. Cuando vinieron, con los cigarros en la boca, hui. Pero siempre estaré con vosotros". Una respiración agitada surgió del auricular.
+—¿A quién tenemos aquí?
 
-"Por eso papá desapareció sin más", dijo su hermana.
+Ralph dio un respingo. Se volvió despacio.
 
-"Creo que hemos resuelto el misterio después de todos estos años, Ralph".
+—No pensé que volveríamos a vernos tan pronto —dijo un hombre.
 
-La lluvia repicaba sobre el asfalto mojado. Un joven estaba sentado en un banco del parque. Llevaba un grueso impermeable y un sombrero para no mojarse. Los árboles estaban desnudos y el viento se llevaba las últimas hojas. El hombre se llamaba Ralph. Era solo un paseo normal de otoño. Como cualquier otro día. Ralph miró a su alrededor. Las calles estaban vacías, por supuesto, porque todos los habitantes de esta ciudad estaban en sus casas disfrutando de una taza de café caliente. Ralph levantó la vista. Un hombre estaba parado en la acera de enfrente. Pero cuando un autobús pasó y ocultó al hombre por un breve momento, el desconocido había vuelto a desaparecer al instante siguiente. Pero Ralph no le dio importancia. Simplemente pensó en una frase que un hombre extraño le había dicho hacía muchos días: "¿Qué es más fuerte que el poder?".
+Tenía una barba larga. Había algo turbio en él. Sin querer, Ralph retrocedió un paso.
+
+—¿Quién eres? —preguntó con cautela.
+
+—Prefiero no decir mi nombre. Pero te diré una cosa: yo, en tu lugar, tendría un poco más de… ¿cómo decirlo?… cuidado.
+
+El hombre dio un paso atrás.
+
+—¡Nos vemos, Ralph!
+
+Y con estas palabras salió del salón y cerró la puerta tras de sí. Cuando Ralph logró serenarse, el extraño ya no estaba. El resto del día no dejó de darle vueltas a la pregunta que aquel desconocido le había hecho días atrás. ¿Qué es más fuerte que el cetro de Zeus? Estaba tan absorto que, al volver a casa, por poco no encontró su propia puerta. Los últimos rayos de sol entraban en la habitación y hacían brillar el polvo. Ralph se preparó una taza de café y fue a su cuarto. Se acercó a la estantería en busca de algo que leer. Su mirada se posó en un libro ya algo viejo. *Dioses de la mitología griega*, rezaba el lomo en letras doradas. Lo cogió y lo abrió. Y de pronto lo vio. Estaba ahí, sin más. «Afrodita. La diosa del amor es una de las…», leyó en voz alta. Y de repente lo entendió todo. La estatua era de Afrodita. El hombre le había dicho qué era más fuerte que el cetro de Zeus. Era el amor. Pero ¿qué buscaba el ladrón? Ralph cogió el teléfono y marcó el número de su hermana.
+
+—Hola, Ralph. Qué detalle que me llames, para variar. ¿Cómo estás?
+
+—Bien, pero tengo que contarte una cosa. ¿Te acuerdas de la estatua que me regalaste? Alguien la ha destrozado. Y no sé por qué…
+
+De repente, a Ralph le asaltó una sospecha. Fue al salón con el móvil pegado a la oreja y examinó con atención el lugar donde había estado la estatua. Aún quedaban algunos añicos en el suelo. Recogió uno y le dio la vuelta. En el reverso había fragmentos de un texto. Reunió los demás pedazos y leyó en voz alta lo que ponía: «No he desaparecido. Me he escondido. Cuando vinieron, con los puros en la boca, huí. Pero siempre estaré con vosotros». Al otro lado de la línea se oyó una respiración agitada.
+
+—Por eso papá desapareció sin más —dijo su hermana—. Creo que, después de tantos años, hemos resuelto el misterio, Ralph.
+
+La lluvia repiqueteaba sobre el asfalto mojado. Un joven estaba sentado en un banco del parque. Llevaba un impermeable grueso y un sombrero para no mojarse. Los árboles estaban desnudos y el viento se llevaba las últimas hojas. El joven se llamaba Ralph. Era solo un paseo de otoño, normal y corriente. Como cualquier otro día. Ralph miró a su alrededor. Las calles estaban vacías, cómo no, porque todos los habitantes de aquella ciudad estaban en casa, disfrutando de su taza de café caliente. Ralph levantó la vista. En la acera de enfrente había un hombre. Pero cuando pasó un autobús y lo tapó un instante, el desconocido ya había vuelto a desaparecer. Ralph no le dio importancia. Solo pensaba en una frase que un extraño le había dicho hacía ya muchos días: «¿Qué es más fuerte que el poder?».
