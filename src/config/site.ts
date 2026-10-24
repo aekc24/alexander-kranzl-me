@@ -80,9 +80,10 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   title: 'Alexander Kranzl',
-  tagline: 'Raw ideas from your personal vault, finely polished into an ultra-fast static blog.',
-  description: 'Minimalist, typography-first Astro 7 theme crafted for technical writers and Obsidian vaults. Pure SSG, zero bloat.',
+  tagline: 'Willkommen auf meiner persönlichen Website!',
+  description: 'Die persönliche Website von Alexander Kranzl, mit Kurzgeschichten auf Deutsch und Spanisch.',
   author: 'Alexander Kranzl',
+  heroTitle: 'Alexander Kranzl',
   lang: 'de',
   logo: '/images/logo-fox.webp',
   favicon: '/favicon.ico',
