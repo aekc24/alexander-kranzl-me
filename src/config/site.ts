@@ -99,6 +99,7 @@ export const siteConfig: SiteConfig = {
     tags: true,
     socialShare: true,
     themeSwitcher: true,
+    languageSelector: false,
     backToTop: true,
     imageZoom: true,
     comments: false
