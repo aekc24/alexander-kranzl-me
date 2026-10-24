@@ -6,12 +6,13 @@ import CopyCode from '../../components/CopyCode.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import StructuredData from '../../components/StructuredData.astro';
 import Comments from '../../components/Comments.astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import { siteConfig } from '../../config/site';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
+  const translations = await getCollection('translations', ({ data }) => !data.draft);
+  return [...posts, ...translations].map((post) => ({
     params: { slug: post.id },
     props: { post }
   }));
@@ -19,6 +20,26 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content, headings } = await render(post);
+
+// Language versions: the original post plus its translations (ids `<original id>/<lang>`)
+const isTranslation = post.collection === 'translations';
+const originalId = isTranslation ? post.id.slice(0, post.id.lastIndexOf('/')) : post.id;
+const original = isTranslation ? await getEntry('blog', originalId) : post;
+const postTranslations = await getCollection('translations', ({ id, data }) =>
+  !data.draft && id.slice(0, id.lastIndexOf('/')) === originalId
+);
+const versions = original
+  ? [original, ...postTranslations].map((version) => {
+      const lang = version.data.lang ?? siteConfig.lang ?? 'en';
+      const name = new Intl.DisplayNames([lang], { type: 'language' }).of(lang) ?? lang;
+      return {
+        lang,
+        name: name.charAt(0).toLocaleUpperCase(lang) + name.slice(1),
+        href: `/blog/${version.id}`,
+        current: version.collection === post.collection && version.id === post.id,
+      };
+    })
+  : [];
 
 const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -33,7 +54,7 @@ const readingMin = Math.max(1, Math.ceil(words / 200));
 // Prev / Next posts
 const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const currentIndex = allPosts.findIndex((p) => p.id === post.id);
+const currentIndex = allPosts.findIndex((p) => p.id === originalId);
 const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 
@@ -60,7 +81,7 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
   <div class:list={['post-page-container', { 'no-sidebar': !showToc }]}>
     <!-- Main Content Column -->
     <div class="post-main">
-      <article class="post-article">
+      <article class="post-article" lang={post.data.lang}>
         <header class="post-header">
           <div class="post-meta">
             <time datetime={post.data.pubDate.toISOString()}>{formattedDate}</time>
@@ -90,6 +111,21 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
 
           <h1 class="post-title">{post.data.title}</h1>
           <p class="post-description">{post.data.description}</p>
+
+          {versions.length > 1 && (
+            <nav class="post-langs" aria-label="Language">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              {versions.map((version) => version.current ? (
+                <span class="post-lang current" lang={version.lang} aria-current="page">{version.name}</span>
+              ) : (
+                <a href={version.href} class="post-lang" lang={version.lang} hreflang={version.lang}>{version.name}</a>
+              ))}
+            </nav>
+          )}
         </header>
 
         <!-- 🔊 Accessible Audio Player (Text-to-Speech) -->
@@ -254,6 +290,31 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
     color: var(--text-muted);
     margin: 0;
     line-height: 1.6;
+  }
+
+  .post-langs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.85rem;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .post-lang {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .post-lang:hover {
+    text-decoration: underline;
+  }
+
+  .post-lang.current {
+    color: var(--text);
+    font-weight: 600;
   }
 
   .post-cover {
