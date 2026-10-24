@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import SearchModal from '../components/SearchModal.astro';
 import BackToTop from '../components/BackToTop.astro';
 import ImageZoom from '../components/ImageZoom.astro';
+import PostHogWebSnippet from '../components/posthog/PostHogWebSnippet.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -65,6 +66,8 @@ const showImageZoom = features.imageZoom !== false;
         document.documentElement.setAttribute('data-theme', savedTheme);
       })();
     </script>
+
+    <PostHogWebSnippet />
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">{t('layout.skipToContent')}</a>
