@@ -207,9 +207,25 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
     let synth = window.speechSynthesis;
     let userToggledWhileSticky = false;
 
-    // Detect language
-    const pageLang = document.documentElement.lang || 'en';
-    const targetLang = pageLang.startsWith('pt') ? 'pt-BR' : 'en-US';
+    // Detect language: the closest lang attribute (article or <html>) decides the voice
+    const pageLang = (contentEl.closest('[lang]') as HTMLElement | null)?.lang || document.documentElement.lang || 'en';
+    const targetLang = pageLang.startsWith('pt') ? 'pt-BR' : pageLang.startsWith('en') ? 'en-US' : pageLang;
+
+    // Pick an installed voice for that language; prefer an exact match, then the
+    // language's main region (de -> de-DE), then the system default voice for it
+    function pickVoice(): SpeechSynthesisVoice | null {
+      const want = targetLang.toLowerCase();
+      const base = want.split('-')[0];
+      const voices = synth.getVoices().filter((v) => v.lang.toLowerCase().replace('_', '-').split('-')[0] === base);
+      const norm = (v: SpeechSynthesisVoice) => v.lang.toLowerCase().replace('_', '-');
+      return (
+        voices.find((v) => norm(v) === want) ??
+        voices.find((v) => norm(v) === `${base}-${base}`) ??
+        voices.find((v) => v.default) ??
+        voices[0] ??
+        null
+      );
+    }
 
     function setExpanded(expanded: boolean) {
       if (expanded) {
@@ -302,6 +318,8 @@ const { selector = '.post-content', title = '', label = 'Listen to Article' } = 
       const text = parts[currentIndex];
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = targetLang;
+      const voice = pickVoice();
+      if (voice) utterance.voice = voice;
       utterance.rate = rates[currentRateIdx];
 
       utterance.onstart = () => {
