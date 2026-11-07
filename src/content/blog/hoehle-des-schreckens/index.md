@@ -1,8 +1,14 @@
-# Die Höhle des Schrecken
+---
+title: "Die Höhle des Schreckens"
+description: "Eine kurze D&D-Begegnung für Charaktere der Stufen 3–5: Erkunde die Höhle von Cara’zac mit Karten, Fallen, Schätzen und Monstern."
+pubDate: 2026-11-07
+tags: ["dungeon-and-dragons"]
+draft: false
+---
 
 Dies ist eine Begegnung für Charaktere der Stufe 3-5. Sie ist kurz und lässt sich einfach in ein D&D-Abenteuer einbauen. Es beinhaltet alle Informationen die der SL braucht, um diese Begegnung auch reibungslos laufen zu lassen.
 
-# Location Overview
+## Location Overview
 
 Die Höhle von Cara’zac ist ein Gewölbe, das von uralten Wesen gebaut worden ist. Es befindet sich tief in einem Wald. Vor vielen vielen Jahren hat diese Höhle einer Bande von Partisanen als Unterschlupf gedient, aber nachdem sie aus der Gegend vertrieben worden sind, haben sie alles mitgenommen. Es wird aber noch gemunkelt, das dort ein riesiges Monster lebt, das von den Partisanen gezüchtet sein soll.
 
@@ -12,11 +18,11 @@ Die Höhle von Cara’zac ist ein Gewölbe, das von uralten Wesen gebaut worden 
 
 ***Decke.*** Die Decken der Tunnels sind normalerweise 3 Meter hoch, außer bei Ausnahmen.
 
-# Reise
+## Reise
 
 Die Reise zur Höhle dauert, egal von wo, einen Tag. Sie führt die Charaktere vorbei an Wälder, Flüssen und Grasland. Auf der Reise treffen sie niemanden oder nichts. 
 
-# Ankunft
+## Ankunft
 
 Die Begegnung spielt in einer beliebigen Höhle. Sie ist eine typische Höhle aus Stein. Wenn die Charaktere bei der Höhle angekommen sind, ließ folgenden Text laut vor:
 
@@ -71,7 +77,7 @@ In der Mitte des Raumes steht ein Holztisch, darauf ein Tagebuch in einer, den C
 
 Dieser Raum wurde früher als Aufbewahrungsraum benutzt, doch als die Partisanen fliehen mussten, ließen sie ihre Schätze hier, damit sie die später holen konnten, eas sie aber nicht schafften, denn die Partisanen wurden hingerichtet.
 
-       ***Trap.*** Vor der Schatzkammer gibt es eine Falle, die diese Kammer vor Eindringlingen                        schützen. Sie ist folgendermaßen aufgebaut: es gibt ein Seil, das 10cm über dem Boden                gespannt ist. Wenn es zu gespannt wird, schießen Pfeile aus den Wänden, aber nur auf ca.            Kopf- bis Kniehöhe. Um die Falle zu sehen: WIS SG 10. Um sie entschärfen zu können: INT             SG 8. 
+***Trap.*** Vor der Schatzkammer gibt es eine Falle, die diese Kammer vor Eindringlingen schützen. Sie ist folgendermaßen aufgebaut: es gibt ein Seil, das 10cm über dem Boden gespannt ist. Wenn es zu gespannt wird, schießen Pfeile aus den Wänden, aber nur auf ca. Kopf- bis Kniehöhe. Um die Falle zu sehen: WIS SG 10. Um sie entschärfen zu können: INT SG 8.
 
 ***Treasure.*** In der rechten hinteren Ecke stehen zwei Holztruhen am Boden. Sie sind unversperrt und die erste ist 1 Meter lang, die zweite einen halben. In der einen liegt ein alter Lederbeutel mit 9 Edelsteine (Azurit und Obsidian), jeder davon ist 10 GM wert. Unteranderem befinden sich in der Kiste 2100 KM, 1400 SM und 60 GM und 20 Pfeile. In der zweiten Holztruhe sind magische Gegenstände: Zauberschriftrolle (Zaubergrad 2), Trank der Wasseratmung, Trank der Tierfreundschaft und Keoghtoms Salbe.
 
@@ -79,7 +85,7 @@ Dieser Raum wurde früher als Aufbewahrungsraum benutzt, doch als die Partisanen
 
 Am Ende des Ganges bei A2 ist ein großes Loch im Boden. Man fällt in eine Höhle, die mit Wasser geflutet ist. Vom Wasser aus gesehen ist das Loch dann in der Decke. Die Wasserbecken ist 10 Meter tief (vom Wasserspiegel),6 Meter breit und vom Wasser zum Loch 4 Meter. Eine **Riesenwürgeschlange** lauert im Wasser. Die Hinweise darauf sind: eine, im Wasser, treibende Haut. Der einzige Ausweg aus der Höhle ist ein kleiner Tunnel am Grund des Beckens in die Wand geht. Er führt zur Oberfläche und endet in einem Erdloch, nahe der Höhle. Aus dem können die Charaktere einfach hinaus.
 
-# Glossar
+## Glossar
 
 ---
 
@@ -299,6 +305,6 @@ Riesige Bestie, ohne Gesinnung
 
 ![002Riesenschlange.webp](002Riesenschlange.webp)
 
-# Notizen:
+## Notizen:
 
 Die Begegnung mit dem Quasit hat den Herausforderungsgrad 275 XP = 4. Charakterstufe, Mittel
