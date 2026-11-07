@@ -23,7 +23,7 @@ So funktioniert es eigentlich. Gar nicht so schwer ;)
 
 Jetzt geht es ab in die Praxis. Wie man gut erzählt, hängt oft von dir ab. In veröffentlichten Abenteuer stehen oft so Boxen mit Text zum Vorlesen. Es ist eine gute Hilfestellung für neue Spielleitungen, aber als professionelle würde ich eher die Informationen herausnehmen und in eigenen Worten erzählen. Im Abenteuer “Dragon of the Icespire Peak” (Deutsch: Der Drache vom Eisnadelgipfel) steht auf Seite 14 folgender Text in einer der grünen Boxen: 
 
-*„The stench of deatch hangs heavy in the air o this dusty, pillared hall, wich has dark, soot-stained fireplace at the east and. A deep alcove in the south wall contains a dais, atop wich rests a limestone throne flanked by grinate statues of dwarf warriors. Between th ethrone and the fireplace is a hallway with stair leading up.”*
+*„The stench of deatch hangs heavy in the air and this dusty, pillared hall, wich has dark, soot-stained fireplace at the east and. A deep alcove in the south wall contains a dais, atop wich rests a limestone throne flanked by grinate statues of dwarf warriors. Between th ethrone and the fireplace is a hallway with stair leading up.”*
 
 In Deutsch:
 
@@ -41,7 +41,7 @@ Das ist also alles. Und jetzt erzählst du einfach in deinen eigenen Worten Es k
 > Als ihr hineintreten liegt der Geruch Von Verwesung in der Luft. Am Saalende, am östlichen Ende, befindet sich ein Kamin. Er ist von Ruß überschwert und alles darüber, die ganze Wand ist schwarz. Pechschwarz. Daneben befindet sich ein Karlstein-Thron. Der Thron wird flankiert von Granitstatuen und als ihr näher schaut, erkennt ihr, dass es Zwergkrieger darstellen soll. Und als ihr dann nochmal euch umschaut, seht ihr, dass zwischen dem Thron und dem Kamin eine Treppe nach oben führt.
 > 
 
-Es klingt einfach viel natürlicher. Aber wenn du dich beim erzählen noch nicht so wohl fühlst, ließ den Text aus den Boxen einfach laut vor.
+Es klingt einfach viel natürlicher. Aber wenn du dich beim Erzählen noch nicht so wohl fühlst, ließ den Text aus den Boxen einfach laut vor.
 
 ## Lebendig
 
@@ -51,4 +51,4 @@ Um eine Szene lebendig und überzeugend zu erzählen gibt es folgende Tricks:
 - spiele mit dem Tempo; langsam für spannende Szenen, schnell für actionreiche Szenen und normal für halt normale Situationen
 - und zu letzt … mache einfach das, was du für richtig entpfindest, denn du bist der Dungeon Master
 
-Ich hoffe diese Hilfestellungen haben dir ein bisschen geholfen. Viel Spaß beim DMing.
+Ich hoffe diese Hilfestellungen haben dir geholfen. Viel Spaß beim DMing.
