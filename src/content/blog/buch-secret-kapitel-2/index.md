@@ -6,7 +6,7 @@ tags: ["geschichten", "secret"]
 image: "/images/buch-secret.jpg"
 ---
 
-General Ostarn wird evon einen Mann mit überdimensionalen Mächten enführt, aber stürzt ihn wenig später auch wieder vom Helikopter. Im selben Moment startet die Strumkompanie eine Rettungsmission, denn sie wissen nicht das ihr General noch lebt. Doch die Operation scheitert, weil Spione in der Komanie waren. Was am Anfang einfach begonnen hat, endete als ein reines Massaker.  
+General Ostarn wird von einen Mann mit überdimensionalen Mächten enführt, aber stürzt ihn wenig später auch wieder vom Helikopter. Im selben Moment startet die Sturmkompanie eine Rettungsmission, denn sie wissen nicht das ihr General noch lebt. Doch die Operation scheitert, weil Spione in der Komanie waren. Was am Anfang einfach begonnen hat, endete als ein reines Massaker.  
 
 <!--more-->
 
