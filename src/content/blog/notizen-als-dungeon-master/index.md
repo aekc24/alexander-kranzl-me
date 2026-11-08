@@ -9,9 +9,7 @@ tags: ["dungeons-and-dragons"]
 
 Ich habe oft im Internet nach Websiten gesucht, wo andere Spielleiter ihre Notizen teilen. Ich habe aber nicht sehr viel Brauchbares gefunden. Auch in YouTube Videos kamen oft nur Erklärungen für Live-Notizen, also die Notizen, die man sich während dem Spiel mitschreibt. Aber nichts von Vorbereitung. Bis dann vor ein paar Tagen ein Video von dem YoutTube-Kanal “Mit Vorteil” rausgekommen ist. Im Video erklären sie die wichtigsten Sachen für einen Dungeon Master und sie thematisieren auch Vorbereitung sowie Notizen. 
 
-Link zum Video: 
-
-[Gib mir 20 Minuten und du kannst jedes Rollenspiel leiten!](https://www.youtube.com/watch?v=0UaHZYzB2kw)
+Link zum Video: https://www.youtube.com/watch?v=0UaHZYzB2kw
 
 Dieser Artikel ist dazu gemacht, das ich meine Notizen teile, das andere Spielleiter oder Spielleiterinnen immer die Chance haben, eine Referenz zu haben. Hier ist ein Schema von der Strukturierung meiner Vorbereitungs-Notizen:x
 
