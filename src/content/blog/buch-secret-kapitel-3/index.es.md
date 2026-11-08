@@ -2,6 +2,7 @@
 title: "Secret: Kapitel 3"
 description: "Ein spannender Action-Fantasy Roman"
 pubDate: 2026-11-08
+lang: es
 tags: ["geschichten", "secret"]
 image: "/Users/Ale.kranzl/Downloads/gemini_generated_image_fnwr1ufmwr1ufmwr.jpg"
 ---
