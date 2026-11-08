@@ -3,7 +3,7 @@ title: "Casa del Fuego"
 description: "Una Historia de miedo"
 pubDate: 2026-11-08
 tags: ["geschichten"]
-leng: es
+lang: es
 ---
 
 Era una soleada tarde de sábado y el sol proyectaba largas sombras en la habitación. El señor Orwin estaba sentado en su gran sillón de lectura, disfrutando de un libro que acababa de adquirir. Se trataba de un ejemplar antiguo, encuadernado en cuero, que contenía las anotaciones de un científico importante. Al cabo de un rato, dejó el libro a un lado y se quedó dormido frente a la chimenea.

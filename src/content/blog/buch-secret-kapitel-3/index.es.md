@@ -6,7 +6,9 @@ lang: es
 tags: ["geschichten", "secret"]
 image: "/images/buch-secret.jpg"
 ---
-##Echo Base; unbekannt
+
+## Echo Base
+
 Todavía reinaba el silencio cuando el hombre delgado se despertó. Escuchó pasos suaves en el pasillo. Seguramente eran solo los guardias nocturnos o alguien que iba al baño. Estaba a punto de volver a dormirse cuando oyó un ruido extraño. Se levantó y entreabrió la puerta de su habitación. En el pasillo había dos hombres. Uno sostenía algo brillante en la mano. El otro gesticulaba apresuradamente.
 
 —No es una buena idea hacer esto —empezó a decir el más bajo—. Nos van a pillar, Paul. Y lo sabes.

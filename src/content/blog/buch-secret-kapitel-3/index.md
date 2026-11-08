@@ -5,6 +5,8 @@ pubDate: 2026-11-08
 tags: ["geschichten", "secret"]
 image: "/images/buch-secret.jpg"
 ---
+
+## Echo Base
 Es war noch leise, als der schmächtige Mann aufwachte. Er hörte leise Schritte am Gang. Bestimmt nur Nachtwächter oder welche die auf die Toilette müssen. Er wollte gerade einschlafen, als er ein sonderbares Geräusch hörte. Er stand auf und öffnete eine Spaltbreit die Türe seines Zimmers. Dort standen zwei Männer im Gang. Einer hielt etwas Glänzendes in der Hand. Der andere gestikulierte hastig mit den Händen.  
 
 "Es ist keine gute Idee, das zu machen", begann der kleinere Mann zu sprechen, "Sie werden uns erwischen, Paul. Und das weißt du." 
