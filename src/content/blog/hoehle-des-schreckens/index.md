@@ -2,7 +2,7 @@
 title: "Die Höhle des Schreckens"
 description: "Eine kurze D&D-Begegnung für Charaktere der Stufen 3–5: Erkunde die Höhle von Cara’zac mit Karten, Fallen, Schätzen und Monstern."
 pubDate: 2026-11-07
-tags: ["dungeon-and-dragons"]
+tags: ["dungeons-and-dragons"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "How to: Notizen"
 description: "Eine Referenz zu Notizen"
-pubDate: 2026-08-05
+pubDate: 2026-11-08
 tags: ["dungeons-and-dragons"]
 ---
 

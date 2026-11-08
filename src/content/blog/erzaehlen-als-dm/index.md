@@ -2,7 +2,7 @@
 title: "Erzählen als DM"
 description: "Eine Hilfestellung zum Erzählen"
 pubDate: 2026-11-07
-tags: ["dungeon-and-dragons"]
+tags: ["dungeons-and-dragons"]
 ---
 
 In diesem Artikel geht es um das Thema erzählen. 
