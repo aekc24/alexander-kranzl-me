@@ -48,7 +48,7 @@ Es klingt einfach viel natürlicher. Aber wenn du dich beim Erzählen noch nicht
 Um eine Szene lebendig und überzeugend zu erzählen gibt es folgende Tricks:
 
 - fühle dich hinein; beschreibe in eigenen Worten
-- spiele mit dem Tempo; langsam für spannende Szenen, schnell für actionreiche Szenen und normal für halt normale Situationen
+- spiele mit dem Tempo; langsam für spannende Szenen, schnell für actionreiche Szenen und normal für normale Situationen
 - und zu letzt … mache einfach das, was du für richtig entpfindest, denn du bist der Dungeon Master
 
 Ich hoffe diese Hilfestellungen haben dir geholfen. Viel Spaß beim DMing.
