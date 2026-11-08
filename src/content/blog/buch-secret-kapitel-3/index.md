@@ -3,7 +3,7 @@ title: "Secret: Kapitel 3"
 description: "Ein spannender Action-Fantasy Roman"
 pubDate: 2026-11-08
 tags: ["geschichten", "secret"]
-image: "/Users/Ale.kranzl/Downloads/gemini_generated_image_fnwr1ufmwr1ufmwr.jpg"
+image: "/images/buch-secret.jpg"
 ---
 Es war noch leise, als der schmächtige Mann aufwachte. Er hörte leise Schritte am Gang. Bestimmt nur Nachtwächter oder welche die auf die Toilette müssen. Er wollte gerade einschlafen, als er ein sonderbares Geräusch hörte. Er stand auf und öffnete eine Spaltbreit die Türe seines Zimmers. Dort standen zwei Männer im Gang. Einer hielt etwas Glänzendes in der Hand. Der andere gestikulierte hastig mit den Händen.  
 

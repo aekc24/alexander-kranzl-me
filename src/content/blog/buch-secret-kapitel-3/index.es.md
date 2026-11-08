@@ -4,7 +4,7 @@ description: "Ein spannender Action-Fantasy Roman"
 pubDate: 2026-11-08
 lang: es
 tags: ["geschichten", "secret"]
-image: "/Users/Ale.kranzl/Downloads/gemini_generated_image_fnwr1ufmwr1ufmwr.jpg"
+image: "/images/buch-secret.jpg"
 ---
 ##Echo Base; unbekannt
 Todavía reinaba el silencio cuando el hombre delgado se despertó. Escuchó pasos suaves en el pasillo. Seguramente eran solo los guardias nocturnos o alguien que iba al baño. Estaba a punto de volver a dormirse cuando oyó un ruido extraño. Se levantó y entreabrió la puerta de su habitación. En el pasillo había dos hombres. Uno sostenía algo brillante en la mano. El otro gesticulaba apresuradamente.
