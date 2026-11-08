@@ -1,3 +1,10 @@
+---
+title: "How to: Notizen"
+description: "Eine Referenz zu Notizen"
+pubDate: 2026-08-05
+tags: ["dungeons-and-dragons"]
+---
+
 # Notizen für Dungeon Master
 
 Ich habe oft im Internet nach Websiten gesucht, wo andere Spielleiter ihre Notizen teilen. Ich habe aber nicht sehr viel Brauchbares gefunden. Auch in YouTube Videos kamen oft nur Erklärungen für Live-Notizen, also die Notizen, die man sich während dem Spiel mitschreibt. Aber nichts von Vorbereitung. Bis dann vor ein paar Tagen ein Video von dem YoutTube-Kanal “Mit Vorteil” rausgekommen ist. Im Video erklären sie die wichtigsten Sachen für einen Dungeon Master und sie thematisieren auch Vorbereitung sowie Notizen. 
