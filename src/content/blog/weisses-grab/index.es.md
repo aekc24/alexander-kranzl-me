@@ -3,6 +3,7 @@ title: "La tumba blanca"
 description: "Una historia de terror"
 pubDate: 2026-11-10
 tags: ["geschichten"]
+lang: es
 ---
 
 En mi celda olía a humedad y a moho. El suelo estaba frío, pero la había acondicionado para que resultara lo más acogedora posible. Estaba sentado en mi catre, pensando en que mi abogado vendría hoy a la cárcel para defenderme ante el tribunal. Quizá tuviera alguna posibilidad. Quién sabe. ¿Por qué estaba yo aquí dentro? Ah, sí. Porque me habían acusado de asesinato. Según la acusación, había matado a mis amigos en una cabaña aislada en la montaña y después había acudido a la policía con una de ellos para aparentar inocencia. Qué disparate. Pero nadie me había creído. En fin, esta es la historia de cómo acabé en la cárcel:
