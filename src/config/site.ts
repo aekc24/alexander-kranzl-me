@@ -91,7 +91,7 @@ export const siteConfig: SiteConfig = {
   heroSubtitle: false,
   lang: 'de',
   logo: '/images/logo-fox.webp',
-  favicon: '/favicon.ico',
+  favicon: '/favicon.png',
   // Substitua pelo seu domínio de produção (usado para SEO Canônico, OpenGraph e RSS)
   // Replace with your production domain (used for Canonical SEO, OpenGraph and RSS feeds)
   // Can be overridden via environment variable (e.g. Vercel: SITE_URL=https://yourdomain.com)
