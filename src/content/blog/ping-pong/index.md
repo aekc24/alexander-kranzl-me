@@ -40,6 +40,3 @@ Der Ball prallt von den Schlägern ab.
 
 Fertig! Viel Spaß beim Spielen!
 
-<div class="video-container" style="aspect-ratio: 4 / 3">
-<iframe title="Ping Pong auf Scratch spielen" src="https://scratch.mit.edu/projects/1158379413/embed" width="800" height="600"></iframe>
-</div>
