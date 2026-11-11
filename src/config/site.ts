@@ -84,8 +84,8 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   title: 'Alexander Kranzl',
-  tagline: 'Willkommen auf meiner persönlichen Website!',
-  description: 'Die persönliche Website von Alexander Kranzl, mit Kurzgeschichten auf Deutsch und Spanisch.',
+  tagline: 'Entdecken. Erschaffen. Erzählen.',
+  description: 'Die persönliche Website von Alexander Kranzl.',
   author: 'Alexander Kranzl',
   heroTitle: 'Entdecken. Erschaffen. Erzählen.',
   heroSubtitle: false,
