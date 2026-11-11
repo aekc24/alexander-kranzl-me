@@ -78,7 +78,7 @@ const hasProjects = (await getCollection('projects')).length > 0;
       <div class="search-brand-note">
         {siteConfig.logo
           ? <img src={siteConfig.logo} alt="" class="search-brand-logo" width="14" height="14" />
-          : '🪨'} {t('search.brand', { title: siteConfig.title })}
+          : '🪨'} {siteConfig.tagline}
       </div>
     </div>
   </div>
@@ -947,6 +947,8 @@ const hasProjects = (await getCollection('projects')).length > 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.6rem;
     padding: 0.6rem 1.15rem;
     border-top: 1px solid var(--border);
     background: var(--bg-surface);
@@ -992,9 +994,6 @@ const hasProjects = (await getCollection('projects')).length > 0;
   @media (max-width: 640px) {
     .search-backdrop {
       padding: 1rem 0.5rem;
-    }
-    .search-brand-note {
-      display: none;
     }
   }
 </style>

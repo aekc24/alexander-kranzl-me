@@ -32,7 +32,7 @@ const topTags = [...tagsMap.entries()]
 <BaseLayout>
   <section class="hero">
     <h1 class="hero-title">
-      {siteConfig.heroTitle ?? 'Crafted for deep thinking & technical writing.'}
+      {siteConfig.heroTitle ?? siteConfig.tagline}
     </h1>
     {heroSubtitle && (
       <p class="hero-subtitle">

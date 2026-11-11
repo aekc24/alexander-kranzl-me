@@ -82,12 +82,14 @@ export interface SiteConfig {
   };
 }
 
+const slogan = 'Entdecken. Erschaffen. Erzählen.';
+
 export const siteConfig: SiteConfig = {
   title: 'Alexander Kranzl',
-  tagline: 'Entdecken. Erschaffen. Erzählen.',
-  description: 'Die persönliche Website von Alexander Kranzl.',
+  tagline: slogan,
+  description: `${slogan} Die persönliche Website von Alexander Kranzl.`,
   author: 'Alexander Kranzl',
-  heroTitle: 'Entdecken. Erschaffen. Erzählen.',
+  heroTitle: slogan,
   heroSubtitle: false,
   lang: 'de',
   logo: '/images/logo-fox.webp',
