@@ -26,7 +26,7 @@ Die Kleinstadt Caen in der Normandie liegt gute 10 Kilometer von der Küste entf
 
 Um 00:18 Uhr springen deswegen britische Fallschirmjäger über Caen ab. Wenige Minuten später landen ganz in der Nähe 3 Lastensegler mit gut 80 weiteren Männern. Sie sind die ersten alliierten Soldaten, die am 6. Juni 1944 auf französischen Boden lande, ihr Auftrag sich sammeln, die Brücke zu besetzen und dabei möglichst wenig Aufsehen erregen. Die Luftlandetruppen bilden in dieser Nacht die Vorhut. Sie sollen die Flanken sichern, wichtige strategische Punkte besetzen und schwer erreichbare Abwehrstellungen der Deutschen zerstören. Das alles ist aber nur die Vorbereitung dessen, was wenige Stunden später unten am Strand passiert.
 
-BBC Übertragung[[1]](https://app.notion.com/p/Operation-Overlord-4167211b723f809ca623dc183660668b?pvs=21): The Coast of Normandy. His beaches, now living history. Along with now, stretch of Send and sea. A Battle was joined between the world of freedom and the world of tyranny.
+BBC Übertragung[[1]]: The Coast of Normandy. His beaches, now living history. Along with now, stretch of Send and sea. A Battle was joined between the world of freedom and the world of tyranny.
 
 Als die deutschen Soldaten durch den Morgendunst hinaus aufs Meer schauen, sehen sie eine ganze Armada auf sich zukommen. Das Meer ist voll mit Kriegsschiffen und Landungsbooten, der Himmel voll mit Bomber und Jagdflugzeuge und um 05:20 Uhr beginnt das Feuer.
 
@@ -40,7 +40,7 @@ Die meisten MG-Nester sind unversehrt und weil die Invasion bei Ebbe stattfindet
 
 Hitler selbst erfährt von dem Angriff allerdings erst um 11:00 Uhr morgens und dass sein Untergang damit begonnen hat, das begreift er noch nicht. Gegenüber Vertrauten meint er, die Briten und Amerikanern seien endlich dort, wo er sie schlagen könne. Die Landung in die Normandie war wohl die wichtigste Operation in der Militärgeschichte
 
-[[1]](https://app.notion.com/p/Operation-Overlord-4167211b723f809ca623dc183660668b?pvs=21) (British Broadcasting Corporation)  britischer Radiofunk
+[[1]] (British Broadcasting Corporation)  britischer Radiofunk
 
 Quellen: 
 
