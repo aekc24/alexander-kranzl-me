@@ -7,6 +7,7 @@ tags: ["wissen", "geschichte"]
 
 Mit einem Angriff dieses Ausmaßes hatten die Deutschen nicht gerechnet: Über 320.000 alliierte Soldaten stürmten am 6. Juni 1944 auf die Küste der Normandie zu. Der D-Day läutete den Beginn der Wende im Zweiten Weltkrieg ein.
 
+
 Die deutschen Soldaten trauten ihren Augen nicht, als sie am 6. Juni 1944 um 3 Uhr morgens durch ihre Ferngläser am Horizont eine schwarze Wand auf sich zukommen sahen. Knapp 5.500 Schiffe, geschützt und geleitet von 4.000 Bombern und ebenso vielen Jagdflugzeugen, bewegten sich auf die französische Küste in der Normandie zu.
 
 Mehr als 320.000 alliierte Soldaten saßen in den Booten. Wenn sie am Omaha-Beach oder einem der anderen Landungsabschnitte angekommen sein sollten, war es ihre Aufgabe, mit Gepäck, Munition und Gewehr durchs Wasser an Land zu stürmen.
