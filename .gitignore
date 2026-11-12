@@ -4,6 +4,7 @@ dist/
 
 # Dependencies
 node_modules/
+.audio-tools/
 
 # Logs
 npm-debug.log*

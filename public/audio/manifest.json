@@ -1,0 +1,56 @@
+{
+  "/blog/der-gang/es": {
+    "src": "/audio/blog/der-gang/es/a8959ccae179bac4604e.mp3",
+    "voice": "de-DE-FlorianMultilingualNeural",
+    "rate": "-5%",
+    "fingerprint": "a8959ccae179bac4604e",
+    "source": "src/content/blog/der-gang/index.es.md",
+    "sourceHash": "1938c634c7e922f894726a134600df32182ae2e9bb85f96245fe90b4c12e573d",
+    "duration": 78.384,
+    "sections": [
+      {
+        "text": "El pasillo",
+        "start": 0
+      },
+      {
+        "text": "Un relato corto sobre un chico que se despierta en plena noche.",
+        "start": 1.342
+      },
+      {
+        "text": "Abrí los ojos de golpe. Empapado en sudor, miré hacia la puerta de mi habitación. Estaba cerrada. Pero ¿no acababa de oír un ruido? Volví a tumbarme sobre el colchón caliente. Poco a poco se me fueron cerrando los ojos. Me quedé dormido de nuevo, respirando con calma.",
+        "start": 4.998
+      },
+      {
+        "text": "De pronto, otra vez aquel ruido. Me desperté. Cuando mis ojos volvieron a acostumbrarse a la oscuridad, lo vi. La puerta estaba abierta. Me levanté de la cama, cogí mi bate de béisbol y me acerqué a la puerta de puntillas, descalzo. El suelo crujía y cada ruido me hacía dar un respingo. Al llegar a la puerta, me asomé al pasillo.",
+        "start": 23.511
+      },
+      {
+        "text": "El pasillo estaba en silencio. Una mosca zumbaba y revoloteaba de un lado a otro. Desapareció en el cuarto de baño. Todas las puertas de las habitaciones estaban cerradas, pero la de la cocina estaba abierta de par en par. Me acerqué con sigilo. Entonces, un ruido. Miré a mi alrededor, nervioso. Había una figura en el pasillo. Con un rápido movimiento de la mano, pulsó el interruptor de la luz. Delante de mí estaba mi padre, cómo no, con una gran lata de galletas en la mano.",
+        "start": 46.065
+      }
+    ]
+  },
+  "/blog/haus-der-flammen": {
+    "src": "/audio/blog/haus-der-flammen/839fea1fe7a498ea5b49.mp3",
+    "voice": "de-DE-FlorianMultilingualNeural",
+    "rate": "-5%",
+    "fingerprint": "839fea1fe7a498ea5b49",
+    "source": "src/content/blog/haus-der-flammen/index.md",
+    "sourceHash": "f8a79f783b3ffcb4047947033cad431870e40adcfe38ae59518759c2f9ba0fe4",
+    "duration": 183.024,
+    "sections": [
+      {
+        "text": "Haus der Flammen",
+        "start": 0
+      },
+      {
+        "text": "Eine Gruselgeschichte",
+        "start": 1.616
+      },
+      {
+        "text": "Es war ein sonniger Samstagabend und die Nachmittagssonne warf lange Schatten ins Zimmer. Mr. Orwin saß in seinem großen Lesesessel und genoss sein, gerade erst erworbenes Buch. Es war ein altes Exemplar mit einem Ledereiband voll mit Aufzeichnungen eines bedeutenden Wissenschaftlers. Nach einiger Zeit legte er das Buch auf die Seite und schlief vor seinem Kamin ein. Er wurde von lauten Geräuschen geweckt. Das Donnern kam vom Keller. Mr. Orwin nahm eine Taschenlampe und stieg mit runzelnder Stirn die dunklen Stufen hinunter. Unten angekommen wollte er alte Mann den Lichtschalter betätigen, doch das Licht ging nicht an. „Was ist den hier los?“, murmelte er. Plötzlich flitze etwas über den nassen und kalten Kellerboden, verschwand aber gleich wieder hinter einem Schrank. Orwin leuchtete hinter jedem Schrank und jedem Gerümpel, doch konnte nichts finden. „Von wo kommt dieses seltsame Geräusch?“. Er konnte es noch immer hören, jetzt schien es aber aus der Küche zu kommen. Mit einem Husten stieg der Mann wieder die kahlen Treppen hoch und schlug den Weg in die Küche ein. Auf dem Weg dorthin begegnete er dem Butler und fragte: „Haben Sie so ein sonderbares Geräusch gehört?“. „Nein, mein Meister, aber vorhin hat eine Frau an der Haustür geklingelt und nach Ihnen gefragt“. „Danke für die Auskunft, Alfred“, bedankte sich der Hausherr und verließ die Küche Richtung Eingang. Dort angekommen öffnete Orwin die große Eichentüre und schaute hinaus. Draußen war alles still und eine Gruppe von Kindern mit Camping-Ausrüstung und großen Rucksäcken gingen über die Straße. Vor ihm breitete sich die Grünfläche seines Hauses mit Gras und ein paar Sträuchern aus. Dann sah er sie. Wie aus dem Nichts stand eine Gestalt neben ihm. Sie hatte einen schwarzen Mantel und einen Schlapphut an und hauchte: „Jetzt haben wir Sie gefunden!“ Im nächsten Moment auf den anderen stach eine Klinge in den Bauch des Herren und er wurde ohnmächtig. Das Erste, was Mr. Orwin hörte, war ein bedrohliches Knistern. Als er die Augen aufschlug, sah der Mann sein Haus in Flammen stehen. Er wollte aufstehen und die Feuerwehr rufen, doch sin Körper war wie gelähmt. Orwin lag etwas entfernt auf dem Gras und in seiner Brust steckte ein Messer. Ein paar Meter vor ihm stand die Gestalt von vorher, mit dem Rücken zu ihm. Sie hatte die Arme erhoben, so wie bei einer Beschwörung. Der Unbekannte zog ihren Hut vom Kopf und entpuppte sich als Frau. Sie ließ auch ihren Regemantel fallen und sprang in die Flammen hinein. Sofort war die hoffnungslose Frau verschwunden. Der alte Mann schaute hoch und dache eine hässliche Fratze im Feuer zu erkennen. Im nächsten Augenblick stürmten von überall Feuerwehrleute und Polizisten her und versuchten die Situation unter Kontrolle zu bringen. Zwei Sanitäterinnen hoben Orwin hoch und legten in sanft auf eine Trage. Er brach kein Wort heraus und wollte sich am Anfang wehren, doch merkte bald, dass es alles nur mehr schlimmer machen würde. Erschöpft, aber friedlich schlief er im Krankenwagen ein.",
+        "start": 3.538
+      }
+    ]
+  }
+}
