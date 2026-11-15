@@ -184,14 +184,20 @@ If `SITE_URL` is not set, Minrock falls back to the demo URL (`https://minrock.v
 ### 6. Recorded audio
 
 The audio player uses static MP3 files in `public/audio/`, with paragraph timestamps
-in `public/audio/manifest.json`. These files must be committed alongside the
-articles. Neither Vercel nor Netlify generates speech during deployment.
+in `public/audio/manifest.json`. `npm run build` automatically generates missing or
+outdated recordings, rebuilds to embed them, and validates the final output.
+Current recordings are reused without Python or speech service calls.
 
-After adding or editing an article, install the generator dependencies once for
-your current Python version (Python 3.10 or later), then generate the recordings:
+Build hosts that need to generate recordings require Python 3.10 or later with pip
+and network access to PyPI and the Microsoft speech service. The build script
+installs generator dependencies into `.audio-tools` when needed. GitHub Actions
+sets up Python automatically. Generation sends published article text to Microsoft.
+If generation fails, the build stops with an error; retry after restoring access.
+
+After adding or editing an article, build normally. To explicitly run the audio
+generator even when validation passes, use:
 
 ```sh
-python3 -m pip install --target .audio-tools --upgrade -r scripts/audio-requirements.txt
 npm run audio:generate
 ```
 
@@ -203,11 +209,11 @@ recordings are reused. Successful recordings are saved as the job runs, so an in
 the same command. The command builds once to extract the text, generates audio,
 then rebuilds to embed the updated manifest and copy the MP3 files into `dist/`.
 
-Commit the finished MP3 files and manifest before deploying. Keep Vercel's build
-command as `npm run build` and its output directory as `dist`. The build checks
+Commit the finished MP3 files and manifest to reuse them across deployments.
+Keep Vercel's build command as `npm run build` and its output directory as `dist`. The build checks
 that every page with an audio player has a recording, valid paragraph timestamps,
-and an unchanged source article. It fails with instructions when audio is missing
-or outdated. Set `audio: false` in an article's frontmatter to publish it without
+and an unchanged source article. Missing or outdated audio is repaired automatically.
+Set `audio: false` in an article's frontmatter to publish it without
 an audio player.
 
 ---
@@ -218,7 +224,7 @@ an audio player.
 | :--- | :--- |
 | `npm run dev` | Starts local dev server at `http://localhost:4321` |
 | `npm run check` | Runs Astro and TypeScript static type diagnostics |
-| `npm run build` | Compiles static pages into `dist/` and checks recorded audio |
+| `npm run build` | Compiles static pages, repairs missing or stale audio, and validates `dist/` |
 | `npm run audio:generate` | Builds, generates missing or changed MP3 recordings, then rebuilds and checks |
 | `npm run audio:check` | Checks audio coverage, source freshness, files and timestamps in an existing build |
 | `npm run test:audio` | Tests the audio deployment checks |

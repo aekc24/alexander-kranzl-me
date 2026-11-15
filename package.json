@@ -31,10 +31,10 @@
   ],
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/check-audio.mjs",
-    "audio:generate": "astro build && python3 scripts/generate-audio.py && npm run build",
+    "build": "node scripts/build.mjs",
+    "audio:generate": "node scripts/build.mjs --generate-audio",
     "audio:check": "node scripts/check-audio.mjs",
-    "test:audio": "node --test scripts/check-audio.test.mjs",
+    "test:audio": "node --test scripts/check-audio.test.mjs scripts/build.test.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "qa": "npm run check && npm run build",
