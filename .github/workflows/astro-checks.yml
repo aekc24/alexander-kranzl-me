@@ -38,6 +38,9 @@ jobs:
       - name: Test audio validation
         run: npm run test:audio
 
+      - name: Test narration language selection
+        run: python3 scripts/test_generate_audio.py
+
       - name: Build site
         run: npm run build
 

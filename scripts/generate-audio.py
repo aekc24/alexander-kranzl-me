@@ -7,11 +7,13 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import sys
+import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / '.audio-tools'))
 
 VOICE = 'de-DE-FlorianMultilingualNeural'
+SPANISH_VOICE = 'es-ES-AlvaroNeural'
 RATE = '-5%'
 CONCURRENCY = 8
 OUTPUT = ROOT / 'public' / 'audio'
@@ -98,6 +100,16 @@ def extract(page):
     return [part for part in parts if any(character.isalnum() for character in part)]
 
 
+def voice_for_page(page):
+    # The interface stays German on translations, so prefer the article's language.
+    nodes = list(page.root.walk())
+    language = next((node.attrs['lang'] for node in nodes
+                     if node.classes & {'post-title', 'project-title'} and node.attrs.get('lang')), None)
+    if language is None:
+        language = next((node.attrs.get('lang', 'de') for node in nodes if node.tag == 'html'), 'de')
+    return SPANISH_VOICE if language.lower().split('-')[0] == 'es' else VOICE
+
+
 def source_routes():
     result = {}
     for collection in ('blog', 'projects'):
@@ -119,16 +131,33 @@ def source_routes():
     return result
 
 
-async def generate(route, parts, source, previous, semaphore):
+def valid_timings(sections, duration):
+    if not sections or duration <= 0:
+        return False
+    last = -1
+    for section in sections:
+        start = section.get('start', -1)
+        if not section.get('text') or not isinstance(start, (int, float)) or not last <= start < duration or start < 0:
+            return False
+        last = start
+    return True
+
+
+async def generate(route, parts, source, previous, semaphore, voice):
     import edge_tts
     from mutagen.mp3 import MP3
 
     source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
-    fingerprint = hashlib.sha256(json.dumps([VOICE, RATE, parts], ensure_ascii=False).encode()).hexdigest()[:20]
+    fingerprint = hashlib.sha256(json.dumps([voice, RATE, parts], ensure_ascii=False).encode()).hexdigest()[:20]
     target = OUTPUT / route.lstrip('/') / f'{fingerprint}.mp3'
     if previous and previous.get('fingerprint') == fingerprint and target.exists():
-        print(f'Cached: {route}', flush=True)
-        return route, {**previous, 'sourceHash': source_hash}
+        try:
+            duration = MP3(target).info.length
+            if abs(duration - previous.get('duration', 0)) < 0.01 and valid_timings(previous.get('sections', []), duration):
+                print(f'Cached: {route}', flush=True)
+                return route, {**previous, 'sourceHash': source_hash}
+        except Exception:
+            pass
 
     async with semaphore:
         text = '\n\n'.join(parts)
@@ -137,13 +166,15 @@ async def generate(route, parts, source, previous, semaphore):
             starts.append(cursor)
             cursor += len(part) + 2
         target.parent.mkdir(parents=True, exist_ok=True)
-        temporary = target.with_suffix('.mp3.tmp')
+        # Concurrent or interrupted runs must never write into the same MP3.
+        with tempfile.NamedTemporaryFile(prefix=target.stem + '.', suffix='.mp3.tmp', dir=target.parent, delete=False) as output:
+            temporary = Path(output.name)
         for attempt in range(3):
             try:
                 boundaries, cursor = [], 0
-                print(f'Generating: {route} ({len(parts)} sections)', flush=True)
+                print(f'Generating: {route} ({len(parts)} sections, {voice})', flush=True)
                 with temporary.open('wb') as output:
-                    speech = edge_tts.Communicate(text, VOICE, rate=RATE, boundary='WordBoundary')
+                    speech = edge_tts.Communicate(text, voice, rate=RATE, boundary='WordBoundary')
                     async for event in speech.stream():
                         if event['type'] == 'audio':
                             output.write(event['data'])
@@ -165,10 +196,12 @@ async def generate(route, parts, source, previous, semaphore):
                         raise ValueError(f'Missing timing for section in {route}: {part[:60]}')
                     sections.append({'text': part, 'start': round(timestamp, 3)})
                 sections[0]['start'] = 0
+                if not valid_timings(sections, duration):
+                    raise ValueError(f'Invalid paragraph timestamps in {route}')
                 temporary.replace(target)
                 return route, {
                     'src': '/' + target.relative_to(ROOT / 'public').as_posix(),
-                    'voice': VOICE, 'rate': RATE, 'fingerprint': fingerprint,
+                    'voice': voice, 'rate': RATE, 'fingerprint': fingerprint,
                     'source': source.relative_to(ROOT).as_posix(), 'sourceHash': source_hash,
                     'duration': round(duration, 3), 'sections': sections,
                 }
@@ -190,12 +223,13 @@ async def main():
     routes, semaphore = source_routes(), asyncio.Semaphore(CONCURRENCY)
     jobs = []
     for page in sorted((ROOT / 'dist').rglob('index.html')):
-        parts = extract(Page(page.read_text('utf-8')))
+        document = Page(page.read_text('utf-8'))
+        parts = extract(document)
         if not parts:
             continue
         route = '/' + page.parent.relative_to(ROOT / 'dist').as_posix()
         source = routes[route]
-        jobs.append((route, parts, source))
+        jobs.append((route, parts, source, voice_for_page(document)))
     if not jobs:
         raise SystemExit('No audio-enabled pages found in dist.')
     # Fail once with a useful message before starting concurrent jobs.
@@ -210,15 +244,15 @@ async def main():
         ) from error
     # Save successful files as we go so an interrupted run can resume.
     results = dict(previous)
-    async def run_job(route, parts, source):
+    async def run_job(route, parts, source, voice):
         try:
-            return await generate(route, parts, source, previous.get(route), semaphore)
+            return await generate(route, parts, source, previous.get(route), semaphore, voice)
         except Exception as error:
             print(f'Failed: {route}: {error}', file=sys.stderr, flush=True)
             return route, None
 
     failures = []
-    tasks = [run_job(route, parts, source) for route, parts, source in jobs]
+    tasks = [run_job(route, parts, source, voice) for route, parts, source, voice in jobs]
     for task in asyncio.as_completed(tasks):
         route, narration = await task
         if narration is None:
@@ -229,9 +263,9 @@ async def main():
         print(f'Saved: {route} ({narration["duration"]:.0f}s)', flush=True)
     if failures:
         raise SystemExit(f'Could not generate {len(failures)} narrations. Successful recordings were saved; rerun npm run audio:generate to retry.')
-    results = {route: results[route] for route, _, _ in jobs}
+    results = {route: results[route] for route, _, _, _ in jobs}
     MANIFEST.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n', 'utf-8')
-    print(f'Completed {len(results)} narrations with {VOICE}.', flush=True)
+    print(f'Completed {len(results)} narrations with language-specific voices.', flush=True)
 
 
 if __name__ == '__main__':

@@ -196,8 +196,10 @@ npm run audio:generate
 ```
 
 Generation sends the published article text to the Microsoft speech service using
-the configured narrator voice. Unchanged recordings are reused. Successful
-recordings are saved as the job runs, so an interrupted run can be resumed with
+the narrator voice selected from the article's language: German uses
+`de-DE-FlorianMultilingualNeural`, Spanish uses `es-ES-AlvaroNeural` (Spain).
+The article language takes precedence over the interface language. Unchanged
+recordings are reused. Successful recordings are saved as the job runs, so an interrupted run can be resumed with
 the same command. The command builds once to extract the text, generates audio,
 then rebuilds to embed the updated manifest and copy the MP3 files into `dist/`.
 
