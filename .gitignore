@@ -5,6 +5,7 @@ dist/
 # Dependencies
 node_modules/
 .audio-tools/
+public/audio/**/*.tmp
 
 # Logs
 npm-debug.log*

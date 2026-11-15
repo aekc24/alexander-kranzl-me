@@ -17,14 +17,15 @@ const narration = (narrations as Record<string, Narration>)[route] ?? null;
 ---
 
 <div id="audio-player-root" class="audio-player-card is-collapsed" data-narration={JSON.stringify(narration)} data-selector={selector} data-title={title} aria-label={t('audio.region')} data-label-expand={t('audio.expand')} data-label-collapse={t('audio.collapse')}>
-  <div class="audio-native-wrap">
-    <audio controls preload="none" playsinline src={narration?.src} aria-label={label}></audio>
-    {narration && <a href={narration.src} download>{t('audio.download')}</a>}
-  </div>
+  {narration && <div class="audio-native-wrap">
+    <audio controls preload="none" playsinline src={narration.src} aria-label={label}></audio>
+    <a href={narration.src} download>{t('audio.download')}</a>
+  </div>}
   <!-- Trigger Bar -->
   <button
     id="audio-toggle-btn"
     type="button"
+    disabled={!narration}
     class="audio-toggle-btn"
     aria-expanded="false"
     aria-controls="audio-player-drawer"
@@ -46,7 +47,7 @@ const narration = (narrations as Record<string, Narration>)[route] ?? null;
     </div>
 
     <div class="audio-toggle-right">
-        <span id="audio-status-badge" class="audio-status-badge" aria-live="polite">{t('audio.ready')}</span>
+        <span id="audio-status-badge" class="audio-status-badge" aria-live="polite">{t(narration ? 'audio.ready' : 'audio.unavailable')}</span>
       <span class="audio-chevron-icon" aria-hidden="true">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -56,7 +57,7 @@ const narration = (narrations as Record<string, Narration>)[route] ?? null;
   </button>
 
   <!-- Drawer Container -->
-  <div id="audio-player-drawer" class="audio-player-drawer" role="region" aria-label={t('audio.controls')}>
+  <div id="audio-player-drawer" class="audio-player-drawer" role="region" aria-label={t('audio.controls')} inert>
     <div class="audio-drawer-content">
       <div class="audio-drawer-divider" aria-hidden="true"></div>
 
@@ -117,6 +118,7 @@ const narration = (narrations as Record<string, Narration>)[route] ?? null;
         </div>
       </div>
       <p class="audio-voice-note">{t('audio.syntheticVoice')}</p>
+      {narration && <a href={narration.src} download>{t('audio.download')}</a>}
       <p id="audio-error" role="alert" hidden></p>
     </div>
   </div>
@@ -127,6 +129,22 @@ const narration = (narrations as Record<string, Narration>)[route] ?? null;
 </script>
 
 <style>
+  .audio-native-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .audio-native-wrap audio {
+    max-width: 100%;
+  }
+
+  .audio-player-card.is-enhanced:not(.has-audio-error) .audio-native-wrap {
+    display: none;
+  }
+
   .audio-player-card {
     position: relative;
     margin: 1.5rem 0 2rem 0;

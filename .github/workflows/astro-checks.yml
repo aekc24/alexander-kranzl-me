@@ -35,6 +35,9 @@ jobs:
       - name: Typecheck
         run: npm run check
 
+      - name: Test audio validation
+        run: npm run test:audio
+
       - name: Build site
         run: npm run build
 

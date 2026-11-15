@@ -181,6 +181,33 @@ Your production URL drives the sitemap, RSS feed, canonical tags, `llms.txt`, an
 
 If `SITE_URL` is not set, Minrock falls back to the demo URL (`https://minrock.vercel.app`), so remember to set it before going live.
 
+### 6. Recorded audio
+
+The audio player uses static MP3 files in `public/audio/`, with paragraph timestamps
+in `public/audio/manifest.json`. These files must be committed alongside the
+articles. Neither Vercel nor Netlify generates speech during deployment.
+
+After adding or editing an article, install the generator dependencies once for
+your current Python version (Python 3.10 or later), then generate the recordings:
+
+```sh
+python3 -m pip install --target .audio-tools --upgrade -r scripts/audio-requirements.txt
+npm run audio:generate
+```
+
+Generation sends the published article text to the Microsoft speech service using
+the configured narrator voice. Unchanged recordings are reused. Successful
+recordings are saved as the job runs, so an interrupted run can be resumed with
+the same command. The command builds once to extract the text, generates audio,
+then rebuilds to embed the updated manifest and copy the MP3 files into `dist/`.
+
+Commit the finished MP3 files and manifest before deploying. Keep Vercel's build
+command as `npm run build` and its output directory as `dist`. The build checks
+that every page with an audio player has a recording, valid paragraph timestamps,
+and an unchanged source article. It fails with instructions when audio is missing
+or outdated. Set `audio: false` in an article's frontmatter to publish it without
+an audio player.
+
 ---
 
 ## 📜 Available Scripts
@@ -189,9 +216,12 @@ If `SITE_URL` is not set, Minrock falls back to the demo URL (`https://minrock.v
 | :--- | :--- |
 | `npm run dev` | Starts local dev server at `http://localhost:4321` |
 | `npm run check` | Runs Astro and TypeScript static type diagnostics |
-| `npm run build` | Compiles production-ready static pages into `dist/` |
+| `npm run build` | Compiles static pages into `dist/` and checks recorded audio |
+| `npm run audio:generate` | Builds, generates missing or changed MP3 recordings, then rebuilds and checks |
+| `npm run audio:check` | Checks audio coverage, source freshness, files and timestamps in an existing build |
+| `npm run test:audio` | Tests the audio deployment checks |
 | `npm run preview` | Previews the production build locally |
-| `npm run qa` | Baseline verification suite (`astro check && astro build`) |
+| `npm run qa` | Baseline verification suite (type checks, build and audio checks) |
 | `npm run audit:google` | Google Search audit (SERP Snippets, Schema.org and Discovery) |
 | `npm run audit:wcag` | Structural WCAG 2.1/2.2 AA accessibility and semantic audit |
 | `npm run audit:security` | DevSecOps Sentinel security and credential scanner |

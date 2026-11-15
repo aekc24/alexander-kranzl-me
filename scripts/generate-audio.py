@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / '.audio-tools'))
 
 VOICE = 'de-DE-FlorianMultilingualNeural'
 RATE = '-5%'
+CONCURRENCY = 8
 OUTPUT = ROOT / 'public' / 'audio'
 MANIFEST = OUTPUT / 'manifest.json'
 TAGS = {'h2', 'h3', 'h4', 'p', 'li', 'blockquote'}
@@ -92,7 +93,9 @@ def extract(page):
     header = [n for n in nodes if n.classes & {'post-title', 'project-title', 'post-description', 'project-description'}]
     body = [n for n in content.walk() if n.tag in TAGS and not excluded(n, content)
             and not any(child.tag in TAGS for child in n.walk())]
-    return [normalize(n.text) for n in header + body if normalize(n.text)]
+    parts = [normalize(n.text) for n in header + body]
+    # Punctuation-only placeholders (e.g. "…") have no spoken word timestamps.
+    return [part for part in parts if any(character.isalnum() for character in part)]
 
 
 def source_routes():
@@ -169,10 +172,14 @@ async def generate(route, parts, source, previous, semaphore):
                     'source': source.relative_to(ROOT).as_posix(), 'sourceHash': source_hash,
                     'duration': round(duration, 3), 'sections': sections,
                 }
-            except Exception:
+            except asyncio.CancelledError:
+                temporary.unlink(missing_ok=True)
+                raise
+            except Exception as error:
                 temporary.unlink(missing_ok=True)
                 if attempt == 2:
                     raise
+                print(f'Retrying: {route}: {error}', file=sys.stderr, flush=True)
                 await asyncio.sleep(2 * (attempt + 1))
 
 
@@ -180,7 +187,7 @@ async def main():
     if not (ROOT / 'dist' / 'index.html').exists():
         raise SystemExit('Build the site first: npm run audio:generate')
     previous = json.loads(MANIFEST.read_text('utf-8')) if MANIFEST.exists() else {}
-    routes, semaphore = source_routes(), asyncio.Semaphore(2)
+    routes, semaphore = source_routes(), asyncio.Semaphore(CONCURRENCY)
     jobs = []
     for page in sorted((ROOT / 'dist').rglob('index.html')):
         parts = extract(Page(page.read_text('utf-8')))
@@ -191,13 +198,37 @@ async def main():
         jobs.append((route, parts, source))
     if not jobs:
         raise SystemExit('No audio-enabled pages found in dist.')
+    # Fail once with a useful message before starting concurrent jobs.
+    try:
+        import edge_tts
+        from mutagen.mp3 import MP3
+    except ImportError as error:
+        raise SystemExit(
+            f'Audio dependencies could not be loaded: {error}\n'
+            'Install them for your Python version: '
+            'python3 -m pip install --target .audio-tools --upgrade -r scripts/audio-requirements.txt'
+        ) from error
     # Save successful files as we go so an interrupted run can resume.
     results = dict(previous)
-    tasks = [generate(route, parts, source, previous.get(route), semaphore) for route, parts, source in jobs]
+    async def run_job(route, parts, source):
+        try:
+            return await generate(route, parts, source, previous.get(route), semaphore)
+        except Exception as error:
+            print(f'Failed: {route}: {error}', file=sys.stderr, flush=True)
+            return route, None
+
+    failures = []
+    tasks = [run_job(route, parts, source) for route, parts, source in jobs]
     for task in asyncio.as_completed(tasks):
         route, narration = await task
+        if narration is None:
+            failures.append(route)
+            continue
         results[route] = narration
         MANIFEST.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n', 'utf-8')
+        print(f'Saved: {route} ({narration["duration"]:.0f}s)', flush=True)
+    if failures:
+        raise SystemExit(f'Could not generate {len(failures)} narrations. Successful recordings were saved; rerun npm run audio:generate to retry.')
     results = {route: results[route] for route, _, _ in jobs}
     MANIFEST.write_text(json.dumps(results, ensure_ascii=False, indent=2) + '\n', 'utf-8')
     print(f'Completed {len(results)} narrations with {VOICE}.', flush=True)
